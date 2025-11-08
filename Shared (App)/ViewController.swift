@@ -16,7 +16,7 @@ import SafariServices
 typealias PlatformViewController = NSViewController
 #endif
 
-let extensionBundleIdentifier = "com.jacobgrant.SeeTikTok.Extension"
+let extensionBundleIdentifier = "com.jacobgrant.TokCleaner.Extension"
 
 class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMessageHandler {
 

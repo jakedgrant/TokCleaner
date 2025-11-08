@@ -14,20 +14,31 @@
         "512": "images/icon-512.png"
     },
 
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "tiktok_redirect_rules",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    },
+
+    "permissions": [
+        "declarativeNetRequestWithHostAccess"
+    ],
+
+    "host_permissions": [
+        "*://*.tiktok.com/*"
+    ],
+
     "background": {
-        "scripts": [ "background.js" ],
+        "service_worker": "background.js",
         "type": "module"
     },
 
-    "content_scripts": [{
-        "js": [ "content.js" ],
-        "matches": [ "*://example.com/*" ]
-    }],
-
     "action": {
-        "default_popup": "popup.html",
-        "default_icon": "images/toolbar-icon.svg"
-    },
-
-    "permissions": [ ]
+        "default_icon": "images/icon-48.png",
+        "default_title": "TokCleaner - Remove Tracking Parameters"
+    }
 }

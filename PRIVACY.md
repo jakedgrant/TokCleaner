@@ -1,10 +1,10 @@
-# Privacy Policy for SeeTikTok
+# Privacy Policy for TokCleaner
 
 **Last Updated:** November 7, 2025
 
 ## What Our Extension Does
 
-SeeTikTok is a Safari extension for iOS that removes tracking and query parameters from TikTok URLs to provide a cleaner, more private browsing experience.
+TokCleaner is a Safari extension for iOS that removes tracking and query parameters from TikTok URLs to provide a cleaner, more private browsing experience.
 
 ## Data Collection
 
@@ -52,13 +52,13 @@ We may update this privacy policy from time to time. Any changes will be posted 
 You can disable this extension at any time by:
 1. Opening Settings on your iOS device
 2. Navigating to Safari → Extensions
-3. Toggling SeeTikTok off
+3. Toggling TokCleaner off
 
 ## Contact
 
 If you have any questions about this privacy policy, please contact:
 
-**Email:** [Your email address]
+**Email:** jake.d.grant@gmail.com
 
 ---
 

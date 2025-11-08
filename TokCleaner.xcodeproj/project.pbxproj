@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2333C7C22EBEFD51007D8A89 /* SeeTikTok Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2333C7C12EBEFD51007D8A89 /* SeeTikTok Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2333C7CC2EBEFD51007D8A89 /* SeeTikTok Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2333C7CB2EBEFD51007D8A89 /* SeeTikTok Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2333C7C22EBEFD51007D8A89 /* TokCleaner Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2333C7C12EBEFD51007D8A89 /* TokCleaner Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2333C7CC2EBEFD51007D8A89 /* TokCleaner Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2333C7CB2EBEFD51007D8A89 /* TokCleaner Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2333C7C22EBEFD51007D8A89 /* SeeTikTok Extension.appex in Embed Foundation Extensions */,
+				2333C7C22EBEFD51007D8A89 /* TokCleaner Extension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,7 +46,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2333C7CC2EBEFD51007D8A89 /* SeeTikTok Extension.appex in Embed Foundation Extensions */,
+				2333C7CC2EBEFD51007D8A89 /* TokCleaner Extension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,14 +54,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2333C7A42EBEFD51007D8A89 /* SeeTikTok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeTikTok.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2333C7B62EBEFD51007D8A89 /* SeeTikTok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeTikTok.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2333C7C12EBEFD51007D8A89 /* SeeTikTok Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SeeTikTok Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2333C7CB2EBEFD51007D8A89 /* SeeTikTok Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SeeTikTok Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		230A655F2EBF057A00CDCA2B /* TokCleaner (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TokCleaner (iOS).entitlements"; sourceTree = "<group>"; };
+		230A65602EBF05C600CDCA2B /* TokCleaner Extension (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TokCleaner Extension (iOS).entitlements"; sourceTree = "<group>"; };
+		2333C7A42EBEFD51007D8A89 /* TokCleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokCleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2333C7B62EBEFD51007D8A89 /* TokCleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokCleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2333C7C12EBEFD51007D8A89 /* TokCleaner Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TokCleaner Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2333C7CB2EBEFD51007D8A89 /* TokCleaner Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TokCleaner Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		2333C7EF2EBEFD51007D8A89 /* Exceptions for "Shared (App)" folder in "SeeTikTok (iOS)" target */ = {
+		2333C7EF2EBEFD51007D8A89 /* Exceptions for "Shared (App)" folder in "TokCleaner (iOS)" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"/Localized: Resources/Main.html",
@@ -71,23 +73,23 @@
 				Resources/Style.css,
 				ViewController.swift,
 			);
-			target = 2333C7A32EBEFD51007D8A89 /* SeeTikTok (iOS) */;
+			target = 2333C7A32EBEFD51007D8A89 /* TokCleaner (iOS) */;
 		};
-		2333C7F32EBEFD51007D8A89 /* Exceptions for "iOS (Extension)" folder in "SeeTikTok Extension (iOS)" target */ = {
+		2333C7F32EBEFD51007D8A89 /* Exceptions for "iOS (Extension)" folder in "TokCleaner Extension (iOS)" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 2333C7C02EBEFD51007D8A89 /* SeeTikTok Extension (iOS) */;
+			target = 2333C7C02EBEFD51007D8A89 /* TokCleaner Extension (iOS) */;
 		};
-		2333C7F82EBEFD51007D8A89 /* Exceptions for "iOS (App)" folder in "SeeTikTok (iOS)" target */ = {
+		2333C7F82EBEFD51007D8A89 /* Exceptions for "iOS (App)" folder in "TokCleaner (iOS)" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 2333C7A32EBEFD51007D8A89 /* SeeTikTok (iOS) */;
+			target = 2333C7A32EBEFD51007D8A89 /* TokCleaner (iOS) */;
 		};
-		2333C7F92EBEFD51007D8A89 /* Exceptions for "Shared (App)" folder in "SeeTikTok (macOS)" target */ = {
+		2333C7F92EBEFD51007D8A89 /* Exceptions for "Shared (App)" folder in "TokCleaner (macOS)" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"/Localized: Resources/Main.html",
@@ -97,16 +99,16 @@
 				Resources/Style.css,
 				ViewController.swift,
 			);
-			target = 2333C7B52EBEFD51007D8A89 /* SeeTikTok (macOS) */;
+			target = 2333C7B52EBEFD51007D8A89 /* TokCleaner (macOS) */;
 		};
-		2333C7FD2EBEFD51007D8A89 /* Exceptions for "macOS (Extension)" folder in "SeeTikTok Extension (macOS)" target */ = {
+		2333C7FD2EBEFD51007D8A89 /* Exceptions for "macOS (Extension)" folder in "TokCleaner Extension (macOS)" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 2333C7CA2EBEFD51007D8A89 /* SeeTikTok Extension (macOS) */;
+			target = 2333C7CA2EBEFD51007D8A89 /* TokCleaner Extension (macOS) */;
 		};
-		2333C8022EBEFD51007D8A89 /* Exceptions for "Shared (Extension)" folder in "SeeTikTok Extension (iOS)" target */ = {
+		2333C8022EBEFD51007D8A89 /* Exceptions for "Shared (Extension)" folder in "TokCleaner Extension (iOS)" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Resources/_locales,
@@ -117,11 +119,12 @@
 				Resources/popup.css,
 				Resources/popup.html,
 				Resources/popup.js,
+				Resources/rules.json,
 				SafariWebExtensionHandler.swift,
 			);
-			target = 2333C7C02EBEFD51007D8A89 /* SeeTikTok Extension (iOS) */;
+			target = 2333C7C02EBEFD51007D8A89 /* TokCleaner Extension (iOS) */;
 		};
-		2333C8032EBEFD51007D8A89 /* Exceptions for "Shared (Extension)" folder in "SeeTikTok Extension (macOS)" target */ = {
+		2333C8032EBEFD51007D8A89 /* Exceptions for "Shared (Extension)" folder in "TokCleaner Extension (macOS)" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Resources/_locales,
@@ -132,9 +135,10 @@
 				Resources/popup.css,
 				Resources/popup.html,
 				Resources/popup.js,
+				Resources/rules.json,
 				SafariWebExtensionHandler.swift,
 			);
-			target = 2333C7CA2EBEFD51007D8A89 /* SeeTikTok Extension (macOS) */;
+			target = 2333C7CA2EBEFD51007D8A89 /* TokCleaner Extension (macOS) */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -142,8 +146,8 @@
 		2333C78C2EBEFD4E007D8A89 /* Shared (App) */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				2333C7EF2EBEFD51007D8A89 /* Exceptions for "Shared (App)" folder in "SeeTikTok (iOS)" target */,
-				2333C7F92EBEFD51007D8A89 /* Exceptions for "Shared (App)" folder in "SeeTikTok (macOS)" target */,
+				2333C7EF2EBEFD51007D8A89 /* Exceptions for "Shared (App)" folder in "TokCleaner (iOS)" target */,
+				2333C7F92EBEFD51007D8A89 /* Exceptions for "Shared (App)" folder in "TokCleaner (macOS)" target */,
 			);
 			path = "Shared (App)";
 			sourceTree = "<group>";
@@ -151,8 +155,8 @@
 		2333C7952EBEFD50007D8A89 /* Shared (Extension) */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				2333C8022EBEFD51007D8A89 /* Exceptions for "Shared (Extension)" folder in "SeeTikTok Extension (iOS)" target */,
-				2333C8032EBEFD51007D8A89 /* Exceptions for "Shared (Extension)" folder in "SeeTikTok Extension (macOS)" target */,
+				2333C8022EBEFD51007D8A89 /* Exceptions for "Shared (Extension)" folder in "TokCleaner Extension (iOS)" target */,
+				2333C8032EBEFD51007D8A89 /* Exceptions for "Shared (Extension)" folder in "TokCleaner Extension (macOS)" target */,
 			);
 			explicitFolders = (
 				Resources/_locales,
@@ -164,7 +168,7 @@
 		2333C7A62EBEFD51007D8A89 /* iOS (App) */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				2333C7F82EBEFD51007D8A89 /* Exceptions for "iOS (App)" folder in "SeeTikTok (iOS)" target */,
+				2333C7F82EBEFD51007D8A89 /* Exceptions for "iOS (App)" folder in "TokCleaner (iOS)" target */,
 			);
 			path = "iOS (App)";
 			sourceTree = "<group>";
@@ -177,7 +181,7 @@
 		2333C7C52EBEFD51007D8A89 /* iOS (Extension) */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				2333C7F32EBEFD51007D8A89 /* Exceptions for "iOS (Extension)" folder in "SeeTikTok Extension (iOS)" target */,
+				2333C7F32EBEFD51007D8A89 /* Exceptions for "iOS (Extension)" folder in "TokCleaner Extension (iOS)" target */,
 			);
 			path = "iOS (Extension)";
 			sourceTree = "<group>";
@@ -185,7 +189,7 @@
 		2333C7CF2EBEFD51007D8A89 /* macOS (Extension) */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				2333C7FD2EBEFD51007D8A89 /* Exceptions for "macOS (Extension)" folder in "SeeTikTok Extension (macOS)" target */,
+				2333C7FD2EBEFD51007D8A89 /* Exceptions for "macOS (Extension)" folder in "TokCleaner Extension (macOS)" target */,
 			);
 			path = "macOS (Extension)";
 			sourceTree = "<group>";
@@ -227,6 +231,8 @@
 		2333C7872EBEFD4E007D8A89 = {
 			isa = PBXGroup;
 			children = (
+				230A65602EBF05C600CDCA2B /* SeeTikTok Extension (iOS).entitlements */,
+				230A655F2EBF057A00CDCA2B /* SeeTikTok (iOS).entitlements */,
 				2333C78C2EBEFD4E007D8A89 /* Shared (App) */,
 				2333C7952EBEFD50007D8A89 /* Shared (Extension) */,
 				2333C7A62EBEFD51007D8A89 /* iOS (App) */,
@@ -240,10 +246,10 @@
 		2333C7A52EBEFD51007D8A89 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2333C7A42EBEFD51007D8A89 /* SeeTikTok.app */,
-				2333C7B62EBEFD51007D8A89 /* SeeTikTok.app */,
-				2333C7C12EBEFD51007D8A89 /* SeeTikTok Extension.appex */,
-				2333C7CB2EBEFD51007D8A89 /* SeeTikTok Extension.appex */,
+				2333C7A42EBEFD51007D8A89 /* TokCleaner.app */,
+				2333C7B62EBEFD51007D8A89 /* TokCleaner.app */,
+				2333C7C12EBEFD51007D8A89 /* TokCleaner Extension.appex */,
+				2333C7CB2EBEFD51007D8A89 /* TokCleaner Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -251,9 +257,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2333C7A32EBEFD51007D8A89 /* SeeTikTok (iOS) */ = {
+		2333C7A32EBEFD51007D8A89 /* TokCleaner (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2333C7F52EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "SeeTikTok (iOS)" */;
+			buildConfigurationList = 2333C7F52EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "TokCleaner (iOS)" */;
 			buildPhases = (
 				2333C7A02EBEFD51007D8A89 /* Sources */,
 				2333C7A12EBEFD51007D8A89 /* Frameworks */,
@@ -268,16 +274,16 @@
 			fileSystemSynchronizedGroups = (
 				2333C7A62EBEFD51007D8A89 /* iOS (App) */,
 			);
-			name = "SeeTikTok (iOS)";
+			name = "TokCleaner (iOS)";
 			packageProductDependencies = (
 			);
 			productName = "SeeTikTok (iOS)";
-			productReference = 2333C7A42EBEFD51007D8A89 /* SeeTikTok.app */;
+			productReference = 2333C7A42EBEFD51007D8A89 /* TokCleaner.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2333C7B52EBEFD51007D8A89 /* SeeTikTok (macOS) */ = {
+		2333C7B52EBEFD51007D8A89 /* TokCleaner (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2333C7FF2EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "SeeTikTok (macOS)" */;
+			buildConfigurationList = 2333C7FF2EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "TokCleaner (macOS)" */;
 			buildPhases = (
 				2333C7B22EBEFD51007D8A89 /* Sources */,
 				2333C7B32EBEFD51007D8A89 /* Frameworks */,
@@ -292,16 +298,16 @@
 			fileSystemSynchronizedGroups = (
 				2333C7B72EBEFD51007D8A89 /* macOS (App) */,
 			);
-			name = "SeeTikTok (macOS)";
+			name = "TokCleaner (macOS)";
 			packageProductDependencies = (
 			);
 			productName = "SeeTikTok (macOS)";
-			productReference = 2333C7B62EBEFD51007D8A89 /* SeeTikTok.app */;
+			productReference = 2333C7B62EBEFD51007D8A89 /* TokCleaner.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2333C7C02EBEFD51007D8A89 /* SeeTikTok Extension (iOS) */ = {
+		2333C7C02EBEFD51007D8A89 /* TokCleaner Extension (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2333C7F02EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "SeeTikTok Extension (iOS)" */;
+			buildConfigurationList = 2333C7F02EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "TokCleaner Extension (iOS)" */;
 			buildPhases = (
 				2333C7BD2EBEFD51007D8A89 /* Sources */,
 				2333C7BE2EBEFD51007D8A89 /* Frameworks */,
@@ -314,16 +320,16 @@
 			fileSystemSynchronizedGroups = (
 				2333C7C52EBEFD51007D8A89 /* iOS (Extension) */,
 			);
-			name = "SeeTikTok Extension (iOS)";
+			name = "TokCleaner Extension (iOS)";
 			packageProductDependencies = (
 			);
 			productName = "SeeTikTok Extension (iOS)";
-			productReference = 2333C7C12EBEFD51007D8A89 /* SeeTikTok Extension.appex */;
+			productReference = 2333C7C12EBEFD51007D8A89 /* TokCleaner Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		2333C7CA2EBEFD51007D8A89 /* SeeTikTok Extension (macOS) */ = {
+		2333C7CA2EBEFD51007D8A89 /* TokCleaner Extension (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2333C7FA2EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "SeeTikTok Extension (macOS)" */;
+			buildConfigurationList = 2333C7FA2EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "TokCleaner Extension (macOS)" */;
 			buildPhases = (
 				2333C7C72EBEFD51007D8A89 /* Sources */,
 				2333C7C82EBEFD51007D8A89 /* Frameworks */,
@@ -336,11 +342,11 @@
 			fileSystemSynchronizedGroups = (
 				2333C7CF2EBEFD51007D8A89 /* macOS (Extension) */,
 			);
-			name = "SeeTikTok Extension (macOS)";
+			name = "TokCleaner Extension (macOS)";
 			packageProductDependencies = (
 			);
 			productName = "SeeTikTok Extension (macOS)";
-			productReference = 2333C7CB2EBEFD51007D8A89 /* SeeTikTok Extension.appex */;
+			productReference = 2333C7CB2EBEFD51007D8A89 /* TokCleaner Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -381,10 +387,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2333C7A32EBEFD51007D8A89 /* SeeTikTok (iOS) */,
-				2333C7B52EBEFD51007D8A89 /* SeeTikTok (macOS) */,
-				2333C7C02EBEFD51007D8A89 /* SeeTikTok Extension (iOS) */,
-				2333C7CA2EBEFD51007D8A89 /* SeeTikTok Extension (macOS) */,
+				2333C7A32EBEFD51007D8A89 /* TokCleaner (iOS) */,
+				2333C7B52EBEFD51007D8A89 /* TokCleaner (macOS) */,
+				2333C7C02EBEFD51007D8A89 /* TokCleaner Extension (iOS) */,
+				2333C7CA2EBEFD51007D8A89 /* TokCleaner Extension (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -454,12 +460,12 @@
 /* Begin PBXTargetDependency section */
 		2333C7C42EBEFD51007D8A89 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2333C7C02EBEFD51007D8A89 /* SeeTikTok Extension (iOS) */;
+			target = 2333C7C02EBEFD51007D8A89 /* TokCleaner Extension (iOS) */;
 			targetProxy = 2333C7C32EBEFD51007D8A89 /* PBXContainerItemProxy */;
 		};
 		2333C7CE2EBEFD51007D8A89 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2333C7CA2EBEFD51007D8A89 /* SeeTikTok Extension (macOS) */;
+			target = 2333C7CA2EBEFD51007D8A89 /* TokCleaner Extension (macOS) */;
 			targetProxy = 2333C7CD2EBEFD51007D8A89 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -468,12 +474,13 @@
 		2333C7F12EBEFD51007D8A89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TokCleaner Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PWBLH7P4Y4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "SeeTikTok Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "TokCleaner Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,8 +493,8 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.SeeTikTok.Extension;
-				PRODUCT_NAME = "SeeTikTok Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.TokCleaner.Extension;
+				PRODUCT_NAME = "TokCleaner Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -502,12 +509,13 @@
 		2333C7F22EBEFD51007D8A89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TokCleaner Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PWBLH7P4Y4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "SeeTikTok Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "TokCleaner Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -520,8 +528,8 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.SeeTikTok.Extension;
-				PRODUCT_NAME = "SeeTikTok Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.TokCleaner.Extension;
+				PRODUCT_NAME = "TokCleaner Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -539,12 +547,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "TokCleaner (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PWBLH7P4Y4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = SeeTikTok;
+				INFOPLIST_KEY_CFBundleDisplayName = TokCleaner;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -562,8 +571,8 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.SeeTikTok;
-				PRODUCT_NAME = SeeTikTok;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.TokCleaner;
+				PRODUCT_NAME = TokCleaner;
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -580,12 +589,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "TokCleaner (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PWBLH7P4Y4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = SeeTikTok;
+				INFOPLIST_KEY_CFBundleDisplayName = TokCleaner;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -603,8 +613,8 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.SeeTikTok;
-				PRODUCT_NAME = SeeTikTok;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.TokCleaner;
+				PRODUCT_NAME = TokCleaner;
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -628,7 +638,7 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "SeeTikTok Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "TokCleaner Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -641,8 +651,8 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.SeeTikTok.Extension;
-				PRODUCT_NAME = "SeeTikTok Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.TokCleaner.Extension;
+				PRODUCT_NAME = "TokCleaner Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -664,7 +674,7 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "SeeTikTok Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "TokCleaner Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -677,8 +687,8 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.SeeTikTok.Extension;
-				PRODUCT_NAME = "SeeTikTok Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.TokCleaner.Extension;
+				PRODUCT_NAME = "TokCleaner Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -702,7 +712,7 @@
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = SeeTikTok;
+				INFOPLIST_KEY_CFBundleDisplayName = TokCleaner;
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -717,8 +727,8 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.SeeTikTok;
-				PRODUCT_NAME = SeeTikTok;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.TokCleaner;
+				PRODUCT_NAME = TokCleaner;
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -743,7 +753,7 @@
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = SeeTikTok;
+				INFOPLIST_KEY_CFBundleDisplayName = TokCleaner;
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -758,8 +768,8 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.SeeTikTok;
-				PRODUCT_NAME = SeeTikTok;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacobgrant.TokCleaner;
+				PRODUCT_NAME = TokCleaner;
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -899,7 +909,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2333C7F02EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "SeeTikTok Extension (iOS)" */ = {
+		2333C7F02EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "TokCleaner Extension (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2333C7F12EBEFD51007D8A89 /* Debug */,
@@ -908,7 +918,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2333C7F52EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "SeeTikTok (iOS)" */ = {
+		2333C7F52EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "TokCleaner (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2333C7F62EBEFD51007D8A89 /* Debug */,
@@ -917,7 +927,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2333C7FA2EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "SeeTikTok Extension (macOS)" */ = {
+		2333C7FA2EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "TokCleaner Extension (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2333C7FB2EBEFD51007D8A89 /* Debug */,
@@ -926,7 +936,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2333C7FF2EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "SeeTikTok (macOS)" */ = {
+		2333C7FF2EBEFD51007D8A89 /* Build configuration list for PBXNativeTarget "TokCleaner (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2333C8002EBEFD51007D8A89 /* Debug */,

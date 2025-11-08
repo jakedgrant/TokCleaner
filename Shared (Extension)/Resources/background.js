@@ -1,6 +1,13 @@
-browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    console.log("Received request: ", request);
+// Service worker for Safari Web Extension
+// Runs only when needed, unloads automatically on iOS
 
-    if (request.greeting === "hello")
-        return Promise.resolve({ farewell: "goodbye" });
+browser.runtime.onInstalled.addListener((details) => {
+    console.log('TokCleaner extension installed:', details.reason);
 });
+
+// Optional: Display redirect count as badge (if supported)
+if (browser.declarativeNetRequest?.setExtensionActionOptions) {
+    browser.declarativeNetRequest.setExtensionActionOptions({
+        displayActionCountAsBadgeText: true
+    });
+}
