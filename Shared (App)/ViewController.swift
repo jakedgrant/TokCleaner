@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import WebKit
 
 #if os(macOS)
 import SafariServices
@@ -17,118 +16,133 @@ let extensionBundleIdentifier = "com.jacobgrant.TokCleaner.Extension"
 // MARK: - SwiftUI View
 struct ContentView: View {
     var body: some View {
-        WebView()
-            .ignoresSafeArea()
+        #if os(iOS)
+        iOSContentView()
+        #elseif os(macOS)
+        MacOSContentView()
+        #endif
     }
 }
 
-// MARK: - WebView Representable
-struct WebView: View {
-    #if os(iOS)
-    var body: some View {
-        WebViewRepresentable()
-    }
-    #elseif os(macOS)
-    var body: some View {
-        WebViewRepresentable()
-    }
-    #endif
-}
-
+// MARK: - iOS View
 #if os(iOS)
-struct WebViewRepresentable: UIViewRepresentable {
-    func makeCoordinator() -> Coordinator {
-        Coordinator()
-    }
+struct iOSContentView: View {
+    var body: some View {
+        VStack(spacing: 20) {
+            Spacer()
 
-    func makeUIView(context: Context) -> WKWebView {
-        let config = WKWebViewConfiguration()
-        config.mediaTypesRequiringUserActionForPlayback = []
+            Image("LargeIcon")
+                .resizable()
+                .frame(width: 128, height: 128)
 
-        let webView = WKWebView(frame: .zero, configuration: config)
-        webView.navigationDelegate = context.coordinator
-        webView.scrollView.isScrollEnabled = false
-        webView.configuration.userContentController.add(context.coordinator, name: "controller")
+            Text("You can turn on TokCleaner's Safari extension in Settings.")
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 40)
 
-        if let url = Bundle.main.url(forResource: "Main", withExtension: "html"),
-           let resourceURL = Bundle.main.resourceURL {
-            webView.loadFileURL(url, allowingReadAccessTo: resourceURL)
-        }
-
-        return webView
-    }
-
-    func updateUIView(_ webView: WKWebView, context: Context) {
-        // No updates needed
-    }
-
-    class Coordinator: NSObject, WKNavigationDelegate, WKScriptMessageHandler {
-        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            webView.evaluateJavaScript("show('ios')")
-        }
-
-        func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-            // iOS doesn't need to handle messages
+            Spacer()
         }
     }
 }
-#elseif os(macOS)
-struct WebViewRepresentable: NSViewRepresentable {
-    func makeCoordinator() -> Coordinator {
-        Coordinator()
-    }
+#endif
 
-    func makeNSView(context: Context) -> WKWebView {
-        let config = WKWebViewConfiguration()
+// MARK: - macOS View
+#if os(macOS)
+struct MacOSContentView: View {
+    @State private var extensionEnabled: Bool? = nil
+    @State private var useSettingsInsteadOfPreferences = false
 
-        let webView = WKWebView(frame: .zero, configuration: config)
-        webView.navigationDelegate = context.coordinator
-        webView.configuration.userContentController.add(context.coordinator, name: "controller")
+    var body: some View {
+        VStack(spacing: 20) {
+            Spacer()
 
-        if let url = Bundle.main.url(forResource: "Main", withExtension: "html"),
-           let resourceURL = Bundle.main.resourceURL {
-            webView.loadFileURL(url, allowingReadAccessTo: resourceURL)
+            Image("LargeIcon")
+                .resizable()
+                .frame(width: 128, height: 128)
+
+            if let enabled = extensionEnabled {
+                if enabled {
+                    Text(statusMessage(enabled: true))
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 40)
+                } else {
+                    Text(statusMessage(enabled: false))
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 40)
+                }
+            } else {
+                Text(statusMessage(enabled: nil))
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 40)
+            }
+
+            Button(action: openSafariPreferences) {
+                Text(buttonText)
+            }
+            .buttonStyle(.borderedProminent)
+
+            Spacer()
         }
-
-        return webView
+        .onAppear {
+            checkExtensionStatus()
+        }
     }
 
-    func updateNSView(_ webView: WKWebView, context: Context) {
-        // No updates needed
+    private var buttonText: String {
+        if useSettingsInsteadOfPreferences {
+            return "Quit and Open Safari Settings…"
+        } else {
+            return "Quit and Open Safari Extensions Preferences…"
+        }
     }
 
-    class Coordinator: NSObject, WKNavigationDelegate, WKScriptMessageHandler {
-        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            webView.evaluateJavaScript("show('mac')")
-
-            SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: extensionBundleIdentifier) { (state, error) in
-                guard let state = state, error == nil else {
-                    return
+    private func statusMessage(enabled: Bool?) -> String {
+        if useSettingsInsteadOfPreferences {
+            if let enabled = enabled {
+                if enabled {
+                    return "TokCleaner's extension is currently on. You can turn it off in the Extensions section of Safari Settings."
+                } else {
+                    return "TokCleaner's extension is currently off. You can turn it on in the Extensions section of Safari Settings."
                 }
-
-                DispatchQueue.main.async {
-                    if #available(macOS 13, *) {
-                        webView.evaluateJavaScript("show('mac', \(state.isEnabled), true)")
-                    } else {
-                        webView.evaluateJavaScript("show('mac', \(state.isEnabled), false)")
-                    }
+            } else {
+                return "You can turn on TokCleaner's extension in the Extensions section of Safari Settings."
+            }
+        } else {
+            if let enabled = enabled {
+                if enabled {
+                    return "TokCleaner's extension is currently on. You can turn it off in Safari Extensions preferences."
+                } else {
+                    return "TokCleaner's extension is currently off. You can turn it on in Safari Extensions preferences."
                 }
+            } else {
+                return "You can turn on TokCleaner's extension in Safari Extensions preferences."
             }
         }
+    }
 
-        func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-            if (message.body as! String != "open-preferences") {
+    private func checkExtensionStatus() {
+        if #available(macOS 13, *) {
+            useSettingsInsteadOfPreferences = true
+        }
+
+        SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: extensionBundleIdentifier) { (state, error) in
+            guard let state = state, error == nil else {
                 return
             }
 
-            SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionBundleIdentifier) { error in
-                guard error == nil else {
-                    return
-                }
+            DispatchQueue.main.async {
+                extensionEnabled = state.isEnabled
+            }
+        }
+    }
 
-                DispatchQueue.main.async {
-                    NSApp.terminate(nil)
-                }
+    private func openSafariPreferences() {
+        SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionBundleIdentifier) { error in
+            guard error == nil else {
+                return
+            }
+
+            DispatchQueue.main.async {
+                NSApp.terminate(nil)
             }
         }
     }

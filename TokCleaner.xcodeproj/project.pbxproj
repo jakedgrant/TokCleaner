@@ -66,11 +66,7 @@
 		2333C7EF2EBEFD51007D8A89 /* Exceptions for "Shared (App)" folder in "TokCleaner (iOS)" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				"/Localized: Resources/Main.html",
 				Assets.xcassets,
-				Resources/Icon.png,
-				Resources/Script.js,
-				Resources/Style.css,
 				ViewController.swift,
 			);
 			target = 2333C7A32EBEFD51007D8A89 /* TokCleaner (iOS) */;
@@ -92,11 +88,7 @@
 		2333C7F92EBEFD51007D8A89 /* Exceptions for "Shared (App)" folder in "TokCleaner (macOS)" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				"/Localized: Resources/Main.html",
 				Assets.xcassets,
-				Resources/Icon.png,
-				Resources/Script.js,
-				Resources/Style.css,
 				ViewController.swift,
 			);
 			target = 2333C7B52EBEFD51007D8A89 /* TokCleaner (macOS) */;
