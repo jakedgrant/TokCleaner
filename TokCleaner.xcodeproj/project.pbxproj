@@ -231,8 +231,8 @@
 		2333C7872EBEFD4E007D8A89 = {
 			isa = PBXGroup;
 			children = (
-				230A65602EBF05C600CDCA2B /* SeeTikTok Extension (iOS).entitlements */,
-				230A655F2EBF057A00CDCA2B /* SeeTikTok (iOS).entitlements */,
+				230A65602EBF05C600CDCA2B /* TokCleaner Extension (iOS).entitlements */,
+				230A655F2EBF057A00CDCA2B /* TokCleaner (iOS).entitlements */,
 				2333C78C2EBEFD4E007D8A89 /* Shared (App) */,
 				2333C7952EBEFD50007D8A89 /* Shared (Extension) */,
 				2333C7A62EBEFD51007D8A89 /* iOS (App) */,
@@ -373,7 +373,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2333C78B2EBEFD4E007D8A89 /* Build configuration list for PBXProject "SeeTikTok" */;
+			buildConfigurationList = 2333C78B2EBEFD4E007D8A89 /* Build configuration list for PBXProject "TokCleaner" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -555,8 +555,6 @@
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = TokCleaner;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -597,8 +595,6 @@
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = TokCleaner;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -900,7 +896,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2333C78B2EBEFD4E007D8A89 /* Build configuration list for PBXProject "SeeTikTok" */ = {
+		2333C78B2EBEFD4E007D8A89 /* Build configuration list for PBXProject "TokCleaner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2333C8042EBEFD51007D8A89 /* Debug */,
