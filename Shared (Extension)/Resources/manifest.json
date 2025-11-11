@@ -25,11 +25,21 @@
     },
 
     "permissions": [
-        "declarativeNetRequestWithHostAccess"
+        "declarativeNetRequestWithHostAccess",
+        "webNavigation",
+        "tabs"
     ],
 
     "host_permissions": [
         "*://*.tiktok.com/*"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.tiktok.com/*"],
+            "js": ["content.js"],
+            "run_at": "document_start"
+        }
     ],
 
     "background": {
@@ -39,6 +49,7 @@
 
     "action": {
         "default_icon": "images/icon-48.png",
-        "default_title": "TokCleaner - Remove Tracking Parameters"
+        "default_title": "TokCleaner - Remove Tracking Parameters",
+        "default_popup": "popup.html"
     }
 }

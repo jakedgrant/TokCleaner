@@ -5,17 +5,13 @@
 //  Created by Jake Grant on 11/7/25.
 //
 
-import Cocoa
+import SwiftUI
 
 @main
-class AppDelegate: NSObject, NSApplicationDelegate {
-
-    func applicationDidFinishLaunching(_ notification: Notification) {
-        // Override point for customization after application launch.
+struct TokCleanerApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
     }
-
-    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        return true
-    }
-
 }

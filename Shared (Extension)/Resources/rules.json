@@ -5,39 +5,35 @@
         "action": {
             "type": "redirect",
             "redirect": {
-                "regexSubstitution": "\\1"
+                "transform": {
+                    "queryTransform": {
+                        "removeParams": [
+                            "is_from_webapp",
+                            "sender_device",
+                            "utm_source",
+                            "utm_medium",
+                            "utm_campaign",
+                            "u_code",
+                            "refer",
+                            "referer_url",
+                            "referer_video_id",
+                            "_r",
+                            "_t",
+                            "checksum",
+                            "sec_uid",
+                            "share_app_id",
+                            "share_link_id",
+                            "share_author_id",
+                            "social_share_type",
+                            "tt_from",
+                            "u_code"
+                        ]
+                    }
+                }
             }
         },
         "condition": {
-            "regexFilter": "^(https?://(?:www\\.)?tiktok\\.com[^?]*)(?:\\?.*)?$",
-            "resourceTypes": ["main_frame"]
-        }
-    },
-    {
-        "id": 2,
-        "priority": 1,
-        "action": {
-            "type": "redirect",
-            "redirect": {
-                "regexSubstitution": "\\1"
-            }
-        },
-        "condition": {
-            "regexFilter": "^(https?://m\\.tiktok\\.com[^?]*)(?:\\?.*)?$",
-            "resourceTypes": ["main_frame"]
-        }
-    },
-    {
-        "id": 3,
-        "priority": 1,
-        "action": {
-            "type": "redirect",
-            "redirect": {
-                "regexSubstitution": "\\1"
-            }
-        },
-        "condition": {
-            "regexFilter": "^(https?://vm\\.tiktok\\.com[^?]*)(?:\\?.*)?$",
+            "urlFilter": "*tiktok.com/*",
             "resourceTypes": ["main_frame"]
         }
     }
