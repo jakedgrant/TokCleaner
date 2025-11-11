@@ -51,28 +51,13 @@ struct SetupView: View {
                 )
 
                 // Additional Note
-                VStack(spacing: 12) {
-                    HStack(spacing: 8) {
-                        Image(systemName: "checkmark.circle.fill")
-                            .foregroundColor(.green)
-                            .font(.title3)
-                        Text("That's it!")
-                            .font(.headline)
-                            .fontWeight(.semibold)
-                    }
-
-                    Text("Once enabled, TokCleaner will automatically clean tracking parameters from all TikTok links you visit in Safari.")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, 8)
-                }
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color(.systemGray6))
-                .cornerRadius(12)
-                .padding(.horizontal, 20)
-                .padding(.top, 8)
+                InfoCard(
+                    icon: "checkmark.circle.fill",
+                    iconColor: .green,
+                    title: "That's it!",
+                    message: "Once enabled, TokCleaner will automatically clean tracking parameters from all TikTok links you visit in Safari.",
+                    backgroundColor: Color(.systemGray6)
+                )
 
                 Spacer()
                     .frame(height: 20)

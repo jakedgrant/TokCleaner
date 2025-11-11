@@ -7,46 +7,45 @@
 
 import SwiftUI
 
-struct EmphasisCard: View {
-    
+struct EmphasisCard<Content: View>: View {
     let icon: String
+    let iconColor: Color
     let title: String
-    
+    let gradientColors: [Color]
+    let content: Content
+
+    init(
+        icon: String,
+        iconColor: Color = .green,
+        title: String,
+        gradientColors: [Color] = [Color.green.opacity(0.1), Color.blue.opacity(0.1)],
+        @ViewBuilder content: () -> Content
+    ) {
+        self.icon = icon
+        self.iconColor = iconColor
+        self.title = title
+        self.gradientColors = gradientColors
+        self.content = content()
+    }
+
     var body: some View {
         VStack(spacing: 16) {
             HStack(spacing: 8) {
                 Image(systemName: icon)
-                    .foregroundColor(.green)
+                    .foregroundColor(iconColor)
                     .font(.title2)
                 Text(title)
                     .font(.title3)
                     .fontWeight(.semibold)
             }
-            
-            VStack(alignment: .leading, spacing: 12) {
-                PrivacyPoint(
-                    icon: "iphone",
-                    text: "Everything happens on device"
-                )
-                PrivacyPoint(
-                    icon: "wifi.slash",
-                    text: "No internet connection required"
-                )
-                PrivacyPoint(
-                    icon: "chart.bar.xaxis",
-                    text: "Zero data collection or analytics"
-                )
-                PrivacyPoint(
-                    icon: "eye.slash",
-                    text: "We can't see what you browse"
-                )
-            }
+
+            content
         }
         .padding(20)
         .frame(maxWidth: .infinity)
         .background(
             LinearGradient(
-                gradient: Gradient(colors: [Color.green.opacity(0.1), Color.blue.opacity(0.1)]),
+                gradient: Gradient(colors: gradientColors),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
@@ -55,4 +54,4 @@ struct EmphasisCard: View {
         .padding(.horizontal, 20)
     }
 }
-                
+

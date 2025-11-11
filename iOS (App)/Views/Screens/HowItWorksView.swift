@@ -56,75 +56,39 @@ struct HowItWorksView: View {
                 )
 
                 // Example Section
-                VStack(alignment: .leading, spacing: 16) {
-                    Text("Example")
-                        .font(.headline)
-                        .fontWeight(.semibold)
+                URLComparisonCard(
+                    title: "Example",
+                    beforeLabel: "Before",
+                    beforeURL: "tiktok.com/@user/video/123?is_from_webapp=1&sender_device=pc&utm_source=share",
+                    afterLabel: "After",
+                    afterURL: "tiktok.com/@user/video/123"
+                )
 
+                // Privacy Section
+                EmphasisCard(
+                    icon: "lock.shield.fill",
+                    iconColor: .green,
+                    title: "Your Privacy"
+                ) {
                     VStack(alignment: .leading, spacing: 12) {
-                        // Before
-                        VStack(alignment: .leading, spacing: 6) {
-                            HStack {
-                                Image(systemName: "xmark.circle.fill")
-                                    .foregroundColor(.red)
-                                    .font(.caption)
-                                Text("Before")
-                                    .font(.caption)
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.secondary)
-                            }
-
-                            Text("tiktok.com/@user/video/123?is_from_webapp=1&sender_device=pc&utm_source=share")
-                                .font(.system(.caption, design: .monospaced))
-                                .foregroundColor(.secondary)
-                                .padding(12)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .background(Color.red.opacity(0.1))
-                                .cornerRadius(8)
-                        }
-
-                        // Arrow
-                        HStack {
-                            Spacer()
-                            Image(systemName: "arrow.down")
-                                .foregroundColor(.secondary)
-                                .font(.title3)
-                            Spacer()
-                        }
-
-                        // After
-                        VStack(alignment: .leading, spacing: 6) {
-                            HStack {
-                                Image(systemName: "checkmark.circle.fill")
-                                    .foregroundColor(.green)
-                                    .font(.caption)
-                                Text("After")
-                                    .font(.caption)
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.secondary)
-                            }
-
-                            Text("tiktok.com/@user/video/123")
-                                .font(.system(.caption, design: .monospaced))
-                                .foregroundColor(.primary)
-                                .padding(12)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .background(Color.green.opacity(0.1))
-                                .cornerRadius(8)
-                        }
+                        PrivacyPoint(
+                            icon: "iphone",
+                            text: "Everything happens on your device"
+                        )
+                        PrivacyPoint(
+                            icon: "wifi.slash",
+                            text: "No internet connection required"
+                        )
+                        PrivacyPoint(
+                            icon: "chart.bar.xaxis",
+                            text: "Zero data collection or analytics"
+                        )
+                        PrivacyPoint(
+                            icon: "eye.slash",
+                            text: "We can't see what you browse"
+                        )
                     }
                 }
-                .padding(20)
-                .background(Color(.systemBackground))
-                .cornerRadius(16)
-                .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 2)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(Color(.systemGray5), lineWidth: 1)
-                )
-                .padding(.horizontal, 20)
-
-                EmphasisCard(icon: "lock.shield.fill", title: "Your Privacy")
 
                 Spacer()
                     .frame(height: 20)
