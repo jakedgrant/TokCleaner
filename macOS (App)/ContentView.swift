@@ -1,53 +1,16 @@
 //
-//  ViewController.swift
-//  Shared (App)
+//  ContentView.swift
+//  macOS (App)
 //
 //  Created by Jake Grant on 11/7/25.
 //
 
 import SwiftUI
-
-#if os(macOS)
 import SafariServices
-#endif
 
 let extensionBundleIdentifier = "com.jacobgrant.TokCleaner.Extension"
 
-// MARK: - SwiftUI View
 struct ContentView: View {
-    var body: some View {
-        #if os(iOS)
-        iOSContentView()
-        #elseif os(macOS)
-        MacOSContentView()
-        #endif
-    }
-}
-
-// MARK: - iOS View
-#if os(iOS)
-struct iOSContentView: View {
-    var body: some View {
-        VStack(spacing: 20) {
-            Spacer()
-
-            Image("LargeIcon")
-                .resizable()
-                .frame(width: 128, height: 128)
-
-            Text("You can turn on TokCleaner's Safari extension in Settings.")
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 40)
-
-            Spacer()
-        }
-    }
-}
-#endif
-
-// MARK: - macOS View
-#if os(macOS)
-struct MacOSContentView: View {
     @State private var extensionEnabled: Bool? = nil
     @State private var useSettingsInsteadOfPreferences = false
 
@@ -147,4 +110,3 @@ struct MacOSContentView: View {
         }
     }
 }
-#endif

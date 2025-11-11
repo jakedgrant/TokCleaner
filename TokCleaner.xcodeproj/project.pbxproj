@@ -67,7 +67,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Assets.xcassets,
-				ViewController.swift,
 			);
 			target = 2333C7A32EBEFD51007D8A89 /* TokCleaner (iOS) */;
 		};
@@ -89,7 +88,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Assets.xcassets,
-				ViewController.swift,
 			);
 			target = 2333C7B52EBEFD51007D8A89 /* TokCleaner (macOS) */;
 		};
