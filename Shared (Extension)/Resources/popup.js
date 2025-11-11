@@ -1,148 +1,107 @@
-// Debug logging utility
-const debugLog = [];
-function log(message, data = null) {
-    const entry = `[${new Date().toLocaleTimeString()}] ${message}`;
-    debugLog.push(data ? `${entry}: ${JSON.stringify(data, null, 2)}` : entry);
-    updateDebugDisplay();
-    console.log(message, data);
-}
-
-function updateDebugDisplay() {
-    const debugElement = document.getElementById('debug-log');
-    if (debugElement) {
-        debugElement.textContent = debugLog.join('\n');
-    }
-}
-
-// Check API availability
-async function checkAPIs() {
-    const apiStatus = document.getElementById('api-status');
-
-    if (!browser.declarativeNetRequest) {
-        apiStatus.textContent = '❌ declarativeNetRequest API not available';
-        apiStatus.style.color = 'red';
-        log('ERROR: declarativeNetRequest API not available');
-        return false;
-    }
-
-    apiStatus.textContent = '✅ declarativeNetRequest API available';
-    apiStatus.style.color = 'green';
-    log('declarativeNetRequest API is available');
-    return true;
-}
-
-// Check rules status
-async function checkRules() {
-    const rulesStatus = document.getElementById('rules-status');
+// Check extension status
+async function checkExtensionStatus() {
+    const statusElement = document.getElementById('extension-status');
 
     try {
-        // Check if we can access enabled rulesets
-        const enabledRulesets = await browser.declarativeNetRequest.getEnabledRulesets();
-        log('Enabled rulesets', enabledRulesets);
+        // Simple check - if we can access browser APIs, extension is working
+        const permissions = await browser.permissions.getAll();
 
-        if (enabledRulesets.includes('tiktok_redirect_rules')) {
-            rulesStatus.textContent = `✅ Rules loaded: ${enabledRulesets.join(', ')}`;
-            rulesStatus.style.color = 'green';
-        } else {
-            rulesStatus.textContent = `⚠️ Rules NOT loaded. Found: ${enabledRulesets.join(', ') || 'none'}`;
-            rulesStatus.style.color = 'orange';
-        }
-
-        // Try to get dynamic and session rules
-        try {
-            const dynamicRules = await browser.declarativeNetRequest.getDynamicRules();
-            log('Dynamic rules', dynamicRules);
-        } catch (e) {
-            log('Could not get dynamic rules', e.message);
-        }
-
-        try {
-            const sessionRules = await browser.declarativeNetRequest.getSessionRules();
-            log('Session rules', sessionRules);
-        } catch (e) {
-            log('Could not get session rules', e.message);
-        }
+        statusElement.innerHTML = `
+            <span class="status-dot"></span>
+            Active
+        `;
     } catch (error) {
-        rulesStatus.textContent = `❌ Error checking rules: ${error.message}`;
-        rulesStatus.style.color = 'red';
-        log('Error checking rules', error);
+        statusElement.innerHTML = `
+            <span class="status-dot" style="background: #ff3b30;"></span>
+            Error
+        `;
     }
 }
 
-// Get current tab info
-async function getCurrentTabInfo() {
-    const currentUrlDiv = document.getElementById('current-url');
+// Check current page
+async function checkCurrentPage() {
+    const pageStatus = document.getElementById('page-status');
+    const pageIcon = pageStatus.querySelector('.page-icon');
+    const pageMessage = document.getElementById('page-message');
 
     try {
         const tabs = await browser.tabs.query({ active: true, currentWindow: true });
         if (tabs.length > 0) {
             const url = tabs[0].url;
-            currentUrlDiv.textContent = url;
-            log('Current tab URL', url);
 
-            // Check if it's a TikTok URL with params
+            // Check if it's a TikTok page
             if (url.includes('tiktok.com')) {
                 const urlObj = new URL(url);
+
                 if (urlObj.search) {
-                    currentUrlDiv.style.color = 'orange';
-                    currentUrlDiv.textContent += '\n⚠️ Has query parameters!';
-                    log('TikTok URL has query parameters', urlObj.search);
+                    // Has query parameters (shouldn't happen if extension works)
+                    pageStatus.className = 'page-info tiktok';
+                    pageIcon.textContent = '⚠️';
+                    pageMessage.textContent = 'TikTok page with tracking parameters detected';
                 } else {
-                    currentUrlDiv.style.color = 'green';
-                    currentUrlDiv.textContent += '\n✅ Clean (no params)';
-                    log('TikTok URL is clean');
+                    // Clean TikTok URL
+                    pageStatus.className = 'page-info clean';
+                    pageIcon.textContent = '✓';
+                    pageMessage.textContent = 'TikTok page is clean';
                 }
+            } else {
+                // Not a TikTok page
+                pageStatus.className = 'page-info';
+                pageIcon.textContent = '📍';
+                pageMessage.textContent = 'Not a TikTok page';
             }
         }
     } catch (error) {
-        currentUrlDiv.textContent = `Error: ${error.message}`;
-        log('Error getting current tab', error);
+        pageMessage.textContent = 'Unable to check current page';
     }
 }
 
-// Test URL cleaning
+// Test functionality
 document.addEventListener('DOMContentLoaded', async () => {
-    log('Popup loaded');
-
-    // Run checks
-    await checkAPIs();
-    await checkRules();
-    await getCurrentTabInfo();
+    // Check status on load
+    await checkExtensionStatus();
+    await checkCurrentPage();
 
     // Test button
-    document.getElementById('test-btn').addEventListener('click', async () => {
-        const resultDiv = document.getElementById('test-result');
-        const testUrl = 'https://www.tiktok.com/@test/video/123456?is_from_webapp=1&sender_device=pc';
+    const testBtn = document.getElementById('test-btn');
+    const resultDiv = document.getElementById('test-result');
 
-        resultDiv.textContent = 'Opening test URL in new tab...';
-        log('Testing with URL', testUrl);
+    testBtn.addEventListener('click', async () => {
+        const testUrl = 'https://www.tiktok.com/@tiktok/video/7016181462948326661?is_from_webapp=1&sender_device=pc';
+
+        testBtn.disabled = true;
+        testBtn.textContent = 'Testing...';
+        resultDiv.className = 'show';
+        resultDiv.textContent = 'Opening test page...';
 
         try {
-            // Open in new tab - the rules should intercept and clean it
+            // Open test URL in background tab
             const tab = await browser.tabs.create({ url: testUrl, active: false });
-            log('Created test tab', tab.id);
 
-            // Wait a bit then check the actual URL
-            setTimeout(async () => {
-                const updatedTab = await browser.tabs.get(tab.id);
-                const finalUrl = updatedTab.url;
-                log('Final URL after redirect', finalUrl);
+            // Wait for redirect to complete
+            await new Promise(resolve => setTimeout(resolve, 2000));
 
-                if (finalUrl.includes('?')) {
-                    resultDiv.textContent = `❌ FAILED: URL still has params\n${finalUrl}`;
-                    resultDiv.style.color = 'red';
-                } else {
-                    resultDiv.textContent = `✅ SUCCESS: Params removed\n${finalUrl}`;
-                    resultDiv.style.color = 'green';
-                }
+            // Check if parameters were removed
+            const updatedTab = await browser.tabs.get(tab.id);
+            const finalUrl = updatedTab.url;
 
-                // Close the test tab
-                await browser.tabs.remove(tab.id);
-            }, 2000);
+            // Close test tab
+            await browser.tabs.remove(tab.id);
+
+            // Show result
+            if (finalUrl.includes('?')) {
+                resultDiv.className = 'error show';
+                resultDiv.textContent = '✗ Test failed - tracking parameters were not removed. Try reloading Safari.';
+            } else {
+                resultDiv.className = 'success show';
+                resultDiv.textContent = '✓ Test passed - extension is working correctly!';
+            }
         } catch (error) {
-            resultDiv.textContent = `Error: ${error.message}`;
-            resultDiv.style.color = 'red';
-            log('Test error', error);
+            resultDiv.className = 'error show';
+            resultDiv.textContent = '✗ Test failed - ' + error.message;
+        } finally {
+            testBtn.disabled = false;
+            testBtn.textContent = 'Run Test';
         }
     });
 });

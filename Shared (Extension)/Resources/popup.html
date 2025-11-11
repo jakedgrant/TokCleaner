@@ -6,29 +6,56 @@
     <script type="module" src="popup.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>TokCleaner</h1>
-        <p>Removes tracking parameters from TikTok URLs</p>
+    <div class="header">
+        <div class="logo">
+            <span class="icon">🧹</span>
+            <h1>TokCleaner</h1>
+        </div>
+        <p class="tagline">Keep your TikTok links clean</p>
+    </div>
 
-        <div id="status">
-            <h2>Extension Status</h2>
-            <div id="api-status">Checking API availability...</div>
-            <div id="rules-status">Checking rules...</div>
+    <div class="content">
+        <div class="status-card">
+            <div class="status-row">
+                <span class="status-label">Extension</span>
+                <span id="extension-status" class="status-value">
+                    <span class="status-dot"></span>
+                    Checking...
+                </span>
+            </div>
+            <p class="status-description">
+                TokCleaner automatically removes tracking parameters from TikTok URLs, protecting your privacy.
+            </p>
         </div>
 
-        <div id="test-section">
-            <h2>Test URL Cleaning</h2>
-            <p>Current tab URL:</p>
-            <div id="current-url">Loading...</div>
-
-            <button id="test-btn">Test TikTok URL</button>
-            <div id="test-result"></div>
+        <div class="current-page">
+            <h3>Current Page</h3>
+            <div id="page-status" class="page-info">
+                <span class="page-icon">📍</span>
+                <span id="page-message">Checking...</span>
+            </div>
         </div>
 
-        <div id="debug-info">
-            <h2>Debug Info</h2>
-            <pre id="debug-log"></pre>
+        <div class="troubleshooting">
+            <details>
+                <summary>Troubleshooting</summary>
+                <div class="troubleshooting-content">
+                    <p><strong>Extension not working?</strong></p>
+                    <ul>
+                        <li>Make sure the extension is enabled in Safari Settings</li>
+                        <li>Check that TikTok.com permissions are granted</li>
+                        <li>Try closing and reopening Safari</li>
+                        <li>Reload TikTok pages after enabling the extension</li>
+                    </ul>
+                    <button id="test-btn">Run Test</button>
+                    <div id="test-result"></div>
+                </div>
+            </details>
         </div>
+    </div>
+
+    <div class="footer">
+        <p>Privacy-focused • No data collected</p>
     </div>
 </body>
 </html>
