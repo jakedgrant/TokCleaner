@@ -124,113 +124,12 @@ struct HowItWorksView: View {
                 )
                 .padding(.horizontal, 20)
 
-                // Privacy Section
-                VStack(spacing: 16) {
-                    HStack(spacing: 8) {
-                        Image(systemName: "lock.shield.fill")
-                            .foregroundColor(.green)
-                            .font(.title2)
-                        Text("Your Privacy")
-                            .font(.title3)
-                            .fontWeight(.semibold)
-                    }
-
-                    VStack(alignment: .leading, spacing: 12) {
-                        PrivacyPoint(
-                            icon: "iphone",
-                            text: "Everything happens on your device"
-                        )
-                        PrivacyPoint(
-                            icon: "wifi.slash",
-                            text: "No internet connection required"
-                        )
-                        PrivacyPoint(
-                            icon: "chart.bar.xaxis",
-                            text: "Zero data collection or analytics"
-                        )
-                        PrivacyPoint(
-                            icon: "eye.slash",
-                            text: "We can't see what you browse"
-                        )
-                    }
-                }
-                .padding(20)
-                .frame(maxWidth: .infinity)
-                .background(
-                    LinearGradient(
-                        gradient: Gradient(colors: [Color.green.opacity(0.1), Color.blue.opacity(0.1)]),
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    )
-                )
-                .cornerRadius(16)
-                .padding(.horizontal, 20)
+                EmphasisCard(icon: "lock.shield.fill", title: "Your Privacy")
 
                 Spacer()
                     .frame(height: 20)
             }
             .padding(.horizontal, 20)
-        }
-    }
-}
-
-// MARK: - Feature Card Component
-struct FeatureCard: View {
-    let icon: String
-    let color: Color
-    let title: String
-    let description: String
-
-    var body: some View {
-        HStack(alignment: .top, spacing: 16) {
-            Image(systemName: icon)
-                .font(.title2)
-                .foregroundColor(.white)
-                .frame(width: 50, height: 50)
-                .background(color)
-                .cornerRadius(12)
-
-            VStack(alignment: .leading, spacing: 6) {
-                Text(title)
-                    .font(.headline)
-                    .fontWeight(.semibold)
-
-                Text(description)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-
-            Spacer()
-        }
-        .padding(16)
-        .background(Color(.systemBackground))
-        .cornerRadius(16)
-        .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 2)
-        .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(Color(.systemGray5), lineWidth: 1)
-        )
-        .padding(.horizontal, 20)
-    }
-}
-
-// MARK: - Privacy Point Component
-struct PrivacyPoint: View {
-    let icon: String
-    let text: String
-
-    var body: some View {
-        HStack(spacing: 12) {
-            Image(systemName: icon)
-                .foregroundColor(.green)
-                .frame(width: 24)
-
-            Text(text)
-                .font(.subheadline)
-                .foregroundColor(.primary)
-
-            Spacer()
         }
     }
 }
