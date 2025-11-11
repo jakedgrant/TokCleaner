@@ -9,18 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 20) {
-            Spacer()
+        TabView {
+            // Setup Tab
+            NavigationView {
+                SetupView()
+                    .navigationTitle("TokCleaner")
+                    .navigationBarTitleDisplayMode(.large)
+            }
+            .tabItem {
+                Label("Setup", systemImage: "gear")
+            }
 
-            Image("LargeIcon")
-                .resizable()
-                .frame(width: 128, height: 128)
-
-            Text("You can turn on TokCleaner's Safari extension in Settings.")
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 40)
-
-            Spacer()
+            // How It Works Tab
+            NavigationView {
+                HowItWorksView()
+                    .navigationTitle("TokCleaner")
+                    .navigationBarTitleDisplayMode(.large)
+            }
+            .tabItem {
+                Label("How It Works", systemImage: "info.circle")
+            }
         }
     }
 }
