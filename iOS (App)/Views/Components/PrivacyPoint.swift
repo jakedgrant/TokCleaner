@@ -26,3 +26,25 @@ struct PrivacyPoint: View {
         }
     }
 }
+
+#Preview {
+    VStack(alignment: .leading, spacing: 12) {
+        PrivacyPoint(
+            icon: "iphone",
+            text: "Everything happens on your device"
+        )
+        PrivacyPoint(
+            icon: "wifi.slash",
+            text: "No internet connection required"
+        )
+        PrivacyPoint(
+            icon: "chart.bar.xaxis",
+            text: "Zero data collection or analytics"
+        )
+        PrivacyPoint(
+            icon: "eye.slash",
+            text: "We can't see what you browse"
+        )
+    }
+    .padding()
+}

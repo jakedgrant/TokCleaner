@@ -29,28 +29,24 @@ struct HowItWorksView: View {
                 // Feature Cards
                 FeatureCard(
                     icon: "link.circle.fill",
-                    color: .blue,
                     title: "Automatic Cleaning",
                     description: "When you click a TikTok link, TokCleaner instantly removes tracking parameters before the page loads."
                 )
 
                 FeatureCard(
                     icon: "eye.slash.fill",
-                    color: .purple,
                     title: "What Gets Removed",
                     description: "Tracking IDs, referrer codes, analytics tokens, and other parameters that track where you came from and how you share links."
                 )
 
                 FeatureCard(
                     icon: "bolt.fill",
-                    color: .orange,
                     title: "Lightning Fast",
                     description: "Links are cleaned instantly in the background. You won't notice any delay—just cleaner, more private URLs."
                 )
 
                 FeatureCard(
                     icon: "checkmark.shield.fill",
-                    color: .green,
                     title: "Always Working",
                     description: "Once enabled, TokCleaner works automatically on all TikTok links. No need to open the app again."
                 )
@@ -67,8 +63,9 @@ struct HowItWorksView: View {
                 // Privacy Section
                 EmphasisCard(
                     icon: "lock.shield.fill",
-                    iconColor: .green,
-                    title: "Your Privacy"
+                    iconColor: Color("tcCyan"),
+                    title: "Your Privacy",
+//                    gradientColors: [Color("tcPink").opacity(0.15), Color("tcCyan").opacity(0.15), ]
                 ) {
                     VStack(alignment: .leading, spacing: 12) {
                         PrivacyPoint(
@@ -95,5 +92,13 @@ struct HowItWorksView: View {
             }
             .padding(.horizontal, 20)
         }
+    }
+}
+
+#Preview {
+    NavigationView {
+        HowItWorksView()
+            .navigationTitle("TokCleaner")
+            .navigationBarTitleDisplayMode(.large)
     }
 }

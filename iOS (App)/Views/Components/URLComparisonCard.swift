@@ -57,7 +57,6 @@ struct URLComparisonCard: View {
             RoundedRectangle(cornerRadius: 16)
                 .stroke(Color(.systemGray5), lineWidth: 1)
         )
-        .padding(.horizontal, 20)
     }
 }
 
@@ -90,4 +89,15 @@ private struct URLDisplayBox: View {
                 .cornerRadius(8)
         }
     }
+}
+
+#Preview {
+    URLComparisonCard(
+        title: "Example",
+        beforeLabel: "Before",
+        beforeURL: "tiktok.com/@user/video/123?is_from_webapp=1&sender_device=pc&utm_source=share",
+        afterLabel: "After",
+        afterURL: "tiktok.com/@user/video/123"
+    )
+    .padding()
 }

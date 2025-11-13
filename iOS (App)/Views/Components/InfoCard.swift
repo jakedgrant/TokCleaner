@@ -35,7 +35,27 @@ struct InfoCard: View {
         .frame(maxWidth: .infinity)
         .background(backgroundColor)
         .cornerRadius(12)
-        .padding(.horizontal, 20)
         .padding(.top, 8)
     }
+}
+
+#Preview {
+    VStack(spacing: 16) {
+        InfoCard(
+            icon: "checkmark.circle.fill",
+            iconColor: Color("tcCyan"),
+            title: "That's it!",
+            message: "Once enabled, TokCleaner will automatically clean tracking parameters from all TikTok links you visit in Safari.",
+            backgroundColor: Color(.systemGray6)
+        )
+
+        InfoCard(
+            icon: "exclamationmark.triangle.fill",
+            iconColor: .orange,
+            title: "Important",
+            message: "Make sure to enable the extension in Safari settings for it to work.",
+            backgroundColor: Color.orange.opacity(0.1)
+        )
+    }
+    .padding()
 }

@@ -66,3 +66,11 @@ struct SetupView: View {
         }
     }
 }
+
+#Preview {
+    NavigationView {
+        SetupView()
+            .navigationTitle("TokCleaner")
+            .navigationBarTitleDisplayMode(.large)
+    }
+}

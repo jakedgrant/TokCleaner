@@ -51,7 +51,35 @@ struct EmphasisCard<Content: View>: View {
             )
         )
         .cornerRadius(16)
-        .padding(.horizontal, 20)
     }
+}
+
+#Preview {
+    EmphasisCard(
+        icon: "lock.shield.fill",
+        iconColor: Color("tcCyan"),
+        title: "Your Privacy",
+        gradientColors: [Color("tcCyan").opacity(0.15), Color("tcCyan").opacity(0.15)]
+    ) {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 12) {
+                Image(systemName: "iphone")
+                    .foregroundColor(.primary)
+                    .frame(width: 24)
+                Text("Everything happens on your device")
+                    .font(.subheadline)
+                Spacer()
+            }
+            HStack(spacing: 12) {
+                Image(systemName: "wifi.slash")
+                    .foregroundColor(.primary)
+                    .frame(width: 24)
+                Text("No internet connection required")
+                    .font(.subheadline)
+                Spacer()
+            }
+        }
+    }
+    .padding()
 }
 

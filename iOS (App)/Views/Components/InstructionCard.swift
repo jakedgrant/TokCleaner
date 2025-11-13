@@ -67,6 +67,19 @@ struct InstructionCard: View {
             RoundedRectangle(cornerRadius: 16)
                 .stroke(Color(.systemGray5), lineWidth: 1)
         )
-        .padding(.horizontal, 20)
     }
+}
+
+#Preview {
+    InstructionCard(
+        icon: "gear",
+        title: "Via Settings App",
+        steps: [
+            "Open the Settings app",
+            "Scroll down and tap Safari",
+            "Tap Extensions",
+            "Enable TokCleaner"
+        ]
+    )
+    .padding()
 }
