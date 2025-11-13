@@ -79,7 +79,3 @@ function showBanner() {
         setTimeout(() => banner.remove(), 300);
     }, 2500);
 }
-
-browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    // Handle messages if needed
-});
