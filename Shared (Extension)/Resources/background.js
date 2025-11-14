@@ -5,7 +5,7 @@ browser.runtime.onInstalled.addListener((details) => {
     console.log('TokCleaner installed');
 });
 
-// Track redirects to avoid loops
+// Track redirects to avoid loops with enhanced state tracking
 const redirectedTabs = new Map();
 
 // Fallback: Manual redirect if content script doesn't catch it
@@ -13,15 +13,49 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     if (changeInfo.url && changeInfo.url.includes('tiktok.com')) {
         const url = new URL(changeInfo.url);
         if (url.search) {
-            const lastRedirect = redirectedTabs.get(tabId);
+            const tabState = redirectedTabs.get(tabId);
             const now = Date.now();
 
-            if (lastRedirect && (now - lastRedirect) < 1000) {
-                return;
+            // Enhanced redirect loop prevention with state tracking
+            if (tabState) {
+                const timeSinceRedirect = now - tabState.lastRedirect;
+                const redirectCount = tabState.count;
+
+                // Prevent redirect if:
+                // 1. Within 1 second AND
+                // 2. Same URL AND
+                // 3. Redirect count < 3 (allow retries for legitimate cases)
+                if (timeSinceRedirect < 1000 &&
+                    tabState.url === changeInfo.url &&
+                    redirectCount < 3) {
+                    return;
+                }
+
+                // Reset if different URL or enough time has passed (5 seconds)
+                if (timeSinceRedirect > 5000 || tabState.url !== changeInfo.url) {
+                    redirectedTabs.set(tabId, {
+                        lastRedirect: now,
+                        url: changeInfo.url,
+                        count: 1
+                    });
+                } else {
+                    // Increment count for same URL within window
+                    redirectedTabs.set(tabId, {
+                        lastRedirect: now,
+                        url: changeInfo.url,
+                        count: redirectCount + 1
+                    });
+                }
+            } else {
+                // First redirect for this tab
+                redirectedTabs.set(tabId, {
+                    lastRedirect: now,
+                    url: changeInfo.url,
+                    count: 1
+                });
             }
 
             const cleanUrl = `${url.protocol}//${url.host}${url.pathname}${url.hash || ''}`;
-            redirectedTabs.set(tabId, now);
 
             browser.tabs.update(tabId, { url: cleanUrl }).catch((error) => {
                 console.error('Redirect failed:', error);
