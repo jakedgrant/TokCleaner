@@ -1,9 +1,7 @@
 // Service worker for Safari Web Extension
 // Runs only when needed, unloads automatically on iOS
 
-browser.runtime.onInstalled.addListener((details) => {
-    console.log('TokCleaner installed');
-});
+import { CONFIG } from './constants.js';
 
 // Track redirects to avoid loops with enhanced state tracking
 const redirectedTabs = new Map();
@@ -22,17 +20,17 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                 const redirectCount = tabState.count;
 
                 // Prevent redirect if:
-                // 1. Within 1 second AND
+                // 1. Within threshold AND
                 // 2. Same URL AND
-                // 3. Redirect count < 3 (allow retries for legitimate cases)
-                if (timeSinceRedirect < 1000 &&
+                // 3. Redirect count below maximum (allow retries for legitimate cases)
+                if (timeSinceRedirect < CONFIG.REDIRECT_LOOP_PREVENTION_MS &&
                     tabState.url === changeInfo.url &&
-                    redirectCount < 3) {
+                    redirectCount < CONFIG.MAX_REDIRECTS_PER_WINDOW) {
                     return;
                 }
 
-                // Reset if different URL or enough time has passed (5 seconds)
-                if (timeSinceRedirect > 5000 || tabState.url !== changeInfo.url) {
+                // Reset if different URL or enough time has passed
+                if (timeSinceRedirect > CONFIG.REDIRECT_RESET_WINDOW_MS || tabState.url !== changeInfo.url) {
                     redirectedTabs.set(tabId, {
                         lastRedirect: now,
                         url: changeInfo.url,
