@@ -1,3 +1,20 @@
+// Sanitize error messages to prevent information disclosure
+function sanitizeErrorMessage(error) {
+    // Log detailed error for debugging (console only, not shown to user)
+    console.error('TokCleaner error:', error);
+
+    // Return generic user-friendly message
+    if (error.message.includes('permission')) {
+        return '✗ Extension permissions need to be enabled in Safari settings.';
+    } else if (error.message.includes('network') || error.message.includes('fetch')) {
+        return '✗ Please check your internet connection.';
+    } else if (error.message.includes('tab')) {
+        return '✗ Unable to open test page. Please try manually.';
+    } else {
+        return '✗ An error occurred. Please reload the extension and try again.';
+    }
+}
+
 // Check extension status
 async function checkExtensionStatus() {
     const statusElement = document.getElementById('extension-status');
@@ -98,7 +115,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         } catch (error) {
             resultDiv.className = 'error show';
-            resultDiv.textContent = '✗ Test failed - ' + error.message;
+            resultDiv.textContent = sanitizeErrorMessage(error);
         } finally {
             testBtn.disabled = false;
             testBtn.textContent = 'Run Test';
