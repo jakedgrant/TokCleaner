@@ -15,6 +15,23 @@ function sanitizeErrorMessage(error) {
     }
 }
 
+// Safe DOM method to set status (prevents XSS)
+function setStatus(element, isActive, text) {
+    // Clear existing content
+    element.textContent = '';
+
+    // Create status dot
+    const dot = document.createElement('span');
+    dot.className = 'status-dot';
+    if (!isActive) {
+        dot.style.background = '#ff3b30';
+    }
+
+    // Add dot and text using safe DOM methods
+    element.appendChild(dot);
+    element.appendChild(document.createTextNode(text));
+}
+
 // Check extension status
 async function checkExtensionStatus() {
     const statusElement = document.getElementById('extension-status');
@@ -23,15 +40,11 @@ async function checkExtensionStatus() {
         // Simple check - if we can access browser APIs, extension is working
         const permissions = await browser.permissions.getAll();
 
-        statusElement.innerHTML = `
-            <span class="status-dot"></span>
-            Active
-        `;
+        // Use safe DOM method instead of innerHTML
+        setStatus(statusElement, true, 'Active');
     } catch (error) {
-        statusElement.innerHTML = `
-            <span class="status-dot" style="background: #ff3b30;"></span>
-            Error
-        `;
+        // Use safe DOM method instead of innerHTML
+        setStatus(statusElement, false, 'Error');
     }
 }
 

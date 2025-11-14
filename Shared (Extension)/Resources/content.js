@@ -17,7 +17,43 @@ if (url.search) {
     }
 }
 
+// Ensure styles are added only once to prevent memory leaks
+function ensureStyles() {
+    // Check if styles already exist
+    const existingStyle = document.getElementById('tokcleaner-styles');
+    if (!existingStyle) {
+        const style = document.createElement('style');
+        style.id = 'tokcleaner-styles';
+        style.textContent = `
+            @keyframes slideDown {
+                from {
+                    transform: translateY(-100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            @keyframes slideUp {
+                from {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateY(-100%);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+}
+
 function showBanner() {
+    // Ensure styles exist (only creates once)
+    ensureStyles();
+
     // Show banner briefly to confirm extension is working
     const banner = document.createElement('div');
     banner.id = 'tokcleaner-banner';
@@ -46,31 +82,6 @@ function showBanner() {
         </div>
     `;
 
-    // Add slide down animation
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        @keyframes slideUp {
-            from {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(style);
     document.body.appendChild(banner);
 
     // Fade out and remove banner after 2.5 seconds

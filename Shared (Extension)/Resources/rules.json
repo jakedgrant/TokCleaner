@@ -25,8 +25,7 @@
                             "share_link_id",
                             "share_author_id",
                             "social_share_type",
-                            "tt_from",
-                            "u_code"
+                            "tt_from"
                         ]
                     }
                 }
