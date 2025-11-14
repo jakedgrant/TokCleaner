@@ -1,3 +1,5 @@
+import { CONFIG } from './constants.js';
+
 // Sanitize error messages to prevent information disclosure
 function sanitizeErrorMessage(error) {
     // Log detailed error for debugging (console only, not shown to user)
@@ -109,7 +111,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const tab = await browser.tabs.create({ url: testUrl, active: false });
 
             // Wait for redirect to complete
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            await new Promise(resolve => setTimeout(resolve, CONFIG.TEST_REDIRECT_WAIT_MS));
 
             // Check if parameters were removed
             const updatedTab = await browser.tabs.get(tab.id);

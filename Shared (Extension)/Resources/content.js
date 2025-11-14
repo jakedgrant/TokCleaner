@@ -84,9 +84,9 @@ function showBanner() {
 
     document.body.appendChild(banner);
 
-    // Fade out and remove banner after 2.5 seconds
+    // Fade out and remove banner after configured duration
     setTimeout(() => {
         banner.style.animation = 'slideUp 0.3s ease-in';
         setTimeout(() => banner.remove(), 300);
-    }, 2500);
+    }, window.TOKCLEANER_CONFIG.BANNER_DISPLAY_MS);
 }

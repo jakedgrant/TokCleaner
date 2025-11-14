@@ -41,7 +41,7 @@
     "content_scripts": [
         {
             "matches": ["*://*.tiktok.com/*"],
-            "js": ["content.js"],
+            "js": ["constants.js", "content.js"],
             "run_at": "document_start"
         }
     ],
