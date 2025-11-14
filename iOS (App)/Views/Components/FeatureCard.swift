@@ -15,8 +15,11 @@ struct FeatureCard: View {
 
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
-            Image(systemName: icon)
-                .font(.title2)
+            
+            OverlappingImages {
+                Image(systemName: icon)
+                    .font(.title2)
+            }
 
             VStack(alignment: .leading, spacing: 6) {
                 Text(title)

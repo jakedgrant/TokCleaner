@@ -16,18 +16,10 @@ struct InstructionCard: View {
         VStack(alignment: .leading, spacing: 16) {
             // Header
             HStack(spacing: 12) {
-                Image(systemName: icon)
-                    .font(.title2)
-                    .foregroundColor(.white)
-                    .frame(width: 44, height: 44)
-                    .background(
-                        LinearGradient(
-                            gradient: Gradient(colors: [Color.black, Color.gray]),
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
-                    .cornerRadius(10)
+                OverlappingImages {
+                    Image(systemName: icon)
+                        .font(.title2)
+                }
 
                 Text(title)
                     .font(.headline)

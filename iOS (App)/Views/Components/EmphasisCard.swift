@@ -31,9 +31,11 @@ struct EmphasisCard<Content: View>: View {
     var body: some View {
         VStack(spacing: 16) {
             HStack(spacing: 8) {
-                Image(systemName: icon)
-                    .foregroundColor(iconColor)
-                    .font(.title2)
+                
+                OverlappingImages {
+                    Image(systemName: icon)
+                        .font(.title2)
+                }
                 Text(title)
                     .font(.title3)
                     .fontWeight(.semibold)
