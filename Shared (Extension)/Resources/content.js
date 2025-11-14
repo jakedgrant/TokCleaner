@@ -88,5 +88,5 @@ function showBanner() {
     setTimeout(() => {
         banner.style.animation = 'slideUp 0.3s ease-in';
         setTimeout(() => banner.remove(), 300);
-    }, window.TOKCLEANER_CONFIG.BANNER_DISPLAY_MS);
+    }, window.TOKCLEANER_CONFIG?.BANNER_DISPLAY_MS || 2500);
 }
