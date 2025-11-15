@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230CA7522EC9405600C75A4B /* TokCleaner.icon in Resources */ = {isa = PBXBuildFile; fileRef = 230CA7512EC9405600C75A4B /* TokCleaner.icon */; };
+		230CA7532EC9405600C75A4B /* TokCleaner.icon in Resources */ = {isa = PBXBuildFile; fileRef = 230CA7512EC9405600C75A4B /* TokCleaner.icon */; };
+		230CA7542EC9405600C75A4B /* TokCleaner.icon in Resources */ = {isa = PBXBuildFile; fileRef = 230CA7512EC9405600C75A4B /* TokCleaner.icon */; };
+		230CA7552EC9405600C75A4B /* TokCleaner.icon in Resources */ = {isa = PBXBuildFile; fileRef = 230CA7512EC9405600C75A4B /* TokCleaner.icon */; };
 		2333C7C22EBEFD51007D8A89 /* TokCleaner Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2333C7C12EBEFD51007D8A89 /* TokCleaner Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2333C7CC2EBEFD51007D8A89 /* TokCleaner Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2333C7CB2EBEFD51007D8A89 /* TokCleaner Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -56,6 +60,7 @@
 /* Begin PBXFileReference section */
 		230A655F2EBF057A00CDCA2B /* TokCleaner (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TokCleaner (iOS).entitlements"; sourceTree = "<group>"; };
 		230A65602EBF05C600CDCA2B /* TokCleaner Extension (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TokCleaner Extension (iOS).entitlements"; sourceTree = "<group>"; };
+		230CA7512EC9405600C75A4B /* TokCleaner.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = TokCleaner.icon; sourceTree = "<group>"; };
 		2333C7A42EBEFD51007D8A89 /* TokCleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokCleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2333C7B62EBEFD51007D8A89 /* TokCleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokCleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2333C7C12EBEFD51007D8A89 /* TokCleaner Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TokCleaner Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +226,7 @@
 		2333C7872EBEFD4E007D8A89 = {
 			isa = PBXGroup;
 			children = (
+				230CA7512EC9405600C75A4B /* TokCleaner.icon */,
 				230A65602EBF05C600CDCA2B /* TokCleaner Extension (iOS).entitlements */,
 				230A655F2EBF057A00CDCA2B /* TokCleaner (iOS).entitlements */,
 				2333C78C2EBEFD4E007D8A89 /* Shared (App) */,
@@ -390,6 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230CA7522EC9405600C75A4B /* TokCleaner.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230CA7542EC9405600C75A4B /* TokCleaner.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +412,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230CA7552EC9405600C75A4B /* TokCleaner.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230CA7532EC9405600C75A4B /* TokCleaner.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
