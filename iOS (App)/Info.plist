@@ -7,7 +7,7 @@
 		<key>UIImageName</key>
 		<string>LargeIcon</string>
 		<key>UIColorName</key>
-		<string>AccentColor</string>
+		<string>LaunchColor</string>
 		<key>UIImageRespectsSafeAreaInsets</key>
 		<true/>
 	</dict>
