@@ -19,6 +19,7 @@ struct ContentView: View {
             .tabItem {
                 Label("Setup", systemImage: "gear")
             }
+            .accessibilityIdentifier("setupTab")
 
             // How It Works Tab
             NavigationView {
@@ -29,6 +30,7 @@ struct ContentView: View {
             .tabItem {
                 Label("How It Works", systemImage: "info.circle")
             }
+            .accessibilityIdentifier("howItWorksTab")
         }
     }
 }
