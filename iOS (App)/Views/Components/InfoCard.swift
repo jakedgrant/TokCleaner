@@ -20,6 +20,7 @@ struct InfoCard: View {
                 Image(systemName: icon)
                     .foregroundColor(iconColor)
                     .font(.title3)
+                    .accessibilityHidden(true)
                 Text(title)
                     .font(.headline)
                     .fontWeight(.semibold)

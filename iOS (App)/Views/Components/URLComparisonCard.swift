@@ -36,6 +36,7 @@ struct URLComparisonCard: View {
                     Image(systemName: "arrow.down")
                         .foregroundColor(.secondary)
                         .font(.title3)
+                        .accessibilityHidden(true)
                     Spacer()
                 }
 
@@ -74,6 +75,7 @@ private struct URLDisplayBox: View {
                 Image(systemName: icon)
                     .foregroundColor(iconColor)
                     .font(.caption)
+                    .accessibilityHidden(true)
                 Text(label)
                     .font(.caption)
                     .fontWeight(.semibold)
