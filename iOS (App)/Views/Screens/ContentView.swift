@@ -19,6 +19,8 @@ struct ContentView: View {
             .tabItem {
                 Label("Setup", systemImage: "gear")
             }
+            .accessibilityLabel("Setup Instructions")
+            .accessibilityHint("Learn how to enable the TokCleaner extension")
 
             // How It Works Tab
             NavigationView {
@@ -29,6 +31,8 @@ struct ContentView: View {
             .tabItem {
                 Label("How It Works", systemImage: "info.circle")
             }
+            .accessibilityLabel("How TokCleaner Works")
+            .accessibilityHint("Learn about features and privacy")
         }
     }
 }
