@@ -40,6 +40,7 @@ struct InstructionCard: View {
                             .frame(width: 24, height: 24)
                             .background(Color.accentColor)
                             .cornerRadius(12)
+                            .accessibilityHidden(true)
 
                         Text(step)
                             .font(.subheadline)
@@ -48,6 +49,9 @@ struct InstructionCard: View {
 
                         Spacer()
                     }
+                    .accessibilityElement(children: .combine)
+                    .accessibilityLabel("Step \(index + 1). \(step)")
+                    .accessibilityAddTraits(.isStaticText)
                 }
             }
         }
