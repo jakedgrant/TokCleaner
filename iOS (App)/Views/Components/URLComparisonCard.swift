@@ -81,6 +81,10 @@ private struct URLDisplayBox: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.secondary)
             }
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel(label == "Before"
+                ? "Original URL with tracking parameters"
+                : "Cleaned URL without tracking")
 
             Text(url)
                 .font(.system(.caption, design: .monospaced))
@@ -89,6 +93,7 @@ private struct URLDisplayBox: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(backgroundColor)
                 .cornerRadius(8)
+                .accessibilityLabel("URL: \(url)")
         }
     }
 }
