@@ -20,6 +20,7 @@ struct InstructionCard: View {
                     Image(systemName: icon)
                         .font(.title2)
                 }
+                .accessibilityHidden(true)
 
                 Text(title)
                     .font(.headline)
