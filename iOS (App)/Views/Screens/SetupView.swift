@@ -32,9 +32,11 @@ struct SetupView: View {
                     title: "Via Settings App",
                     steps: [
                         "Open the Settings app",
+                        "Scroll down to apps",
                         "Scroll down and tap Safari",
                         "Tap Extensions",
-                        "Enable TokCleaner"
+                        "Tap TokCleaner",
+                        "Turn on 'Allow Extension'",
                     ]
                 )
 

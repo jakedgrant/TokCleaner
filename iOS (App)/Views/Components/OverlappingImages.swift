@@ -9,11 +9,13 @@ import SwiftUI
 
 struct OverlappingImages<Content: View>: View {
     
+    @Environment(\.colorScheme) var colorScheme
+    
     let content: Content
     let offset: CGFloat
     
     init(
-        offset: CGFloat = 1.0,
+        offset: CGFloat = 1.2,
         @ViewBuilder content: () -> Content
     ) {
         self.offset = offset
@@ -30,7 +32,7 @@ struct OverlappingImages<Content: View>: View {
             content
                 .foregroundStyle(Color.tcPink)
                 .offset(x: offset)
-                .blendMode(.plusDarker)
+                .blendMode(colorScheme == .dark ? .plusLighter : .plusDarker)
         }
         .compositingGroup()
     }
