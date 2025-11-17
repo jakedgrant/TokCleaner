@@ -90,6 +90,8 @@ struct HowItWorksView: View {
                             text: "We can't see what you browse"
                         )
                     }
+                    .accessibilityElement(children: .combine)
+                    .accessibilityAddTraits(.isStaticText)
                 }
                 .accessibilityIdentifier("emphasisCard_privacy")
 
