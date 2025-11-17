@@ -32,24 +32,28 @@ struct HowItWorksView: View {
                     title: "Automatic Cleaning",
                     description: "When you click a TikTok link, TokCleaner instantly removes tracking parameters before the page loads."
                 )
+                .accessibilityIdentifier("featureCard_0")
 
                 FeatureCard(
                     icon: "eye.slash.fill",
                     title: "What Gets Removed",
                     description: "Tracking IDs, referrer codes, analytics tokens, and other parameters that track where you came from and how you share links."
                 )
+                .accessibilityIdentifier("featureCard_1")
 
                 FeatureCard(
                     icon: "bolt.fill",
                     title: "Lightning Fast",
                     description: "Links are cleaned instantly in the background. You won't notice any delay—just cleaner, more private URLs."
                 )
+                .accessibilityIdentifier("featureCard_2")
 
                 FeatureCard(
                     icon: "checkmark.shield.fill",
                     title: "Always Working",
                     description: "Once enabled, TokCleaner works automatically on all TikTok links. No need to open the app again."
                 )
+                .accessibilityIdentifier("featureCard_3")
 
                 // Example Section
                 URLComparisonCard(
@@ -59,6 +63,7 @@ struct HowItWorksView: View {
                     afterLabel: "After",
                     afterURL: "tiktok.com/@user/video/123"
                 )
+                .accessibilityIdentifier("urlComparisonCard_example")
 
                 // Privacy Section
                 EmphasisCard(
@@ -86,12 +91,14 @@ struct HowItWorksView: View {
                         )
                     }
                 }
+                .accessibilityIdentifier("emphasisCard_privacy")
 
                 Spacer()
                     .frame(height: 20)
             }
             .padding(.horizontal, 20)
         }
+        .accessibilityIdentifier("howItWorksView")
     }
 }
 

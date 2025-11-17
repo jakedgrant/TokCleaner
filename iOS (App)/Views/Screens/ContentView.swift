@@ -21,6 +21,7 @@ struct ContentView: View {
             }
             .accessibilityLabel("Setup Instructions")
             .accessibilityHint("Learn how to enable the TokCleaner extension")
+            .accessibilityIdentifier("setupTab")
 
             // How It Works Tab
             NavigationView {
@@ -33,6 +34,7 @@ struct ContentView: View {
             }
             .accessibilityLabel("How TokCleaner Works")
             .accessibilityHint("Learn about features and privacy")
+            .accessibilityIdentifier("howItWorksTab")
         }
     }
 }
