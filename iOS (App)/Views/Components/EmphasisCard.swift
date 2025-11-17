@@ -36,7 +36,6 @@ struct EmphasisCard<Content: View>: View {
                     Image(systemName: icon)
                         .font(.title2)
                 }
-                .accessibilityHidden(true)
                 Text(title)
                     .font(.title3)
                     .fontWeight(.semibold)

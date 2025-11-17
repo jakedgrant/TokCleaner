@@ -20,7 +20,6 @@ struct FeatureCard: View {
                 Image(systemName: icon)
                     .font(.title2)
             }
-            .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 6) {
                 Text(title)
@@ -41,6 +40,9 @@ struct FeatureCard: View {
             RoundedRectangle(cornerRadius: 16)
                 .stroke(Color(.systemGray5), lineWidth: 1)
         )
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(title). \(description)")
+        .accessibilityAddTraits(.isStaticText)
     }
 }
 
