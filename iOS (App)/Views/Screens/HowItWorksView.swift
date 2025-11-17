@@ -19,6 +19,7 @@ struct HowItWorksView: View {
                     Text("How It Works")
                         .font(.title)
                         .fontWeight(.bold)
+                        .accessibilityAddTraits(.isHeader)
 
                     Text("Automatic link cleaning in Safari")
                         .font(.subheadline)
