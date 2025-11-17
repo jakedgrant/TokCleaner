@@ -32,6 +32,7 @@ struct HowItWorksView: View {
                     title: "Automatic Cleaning",
                     description: "When you click a TikTok link, TokCleaner instantly removes tracking parameters before the page loads."
                 )
+                .id("feature_automaticCleaning")
                 .accessibilityIdentifier("featureCard_0")
 
                 FeatureCard(
@@ -39,6 +40,7 @@ struct HowItWorksView: View {
                     title: "What Gets Removed",
                     description: "Tracking IDs, referrer codes, analytics tokens, and other parameters that track where you came from and how you share links."
                 )
+                .id("feature_whatGetsRemoved")
                 .accessibilityIdentifier("featureCard_1")
 
                 FeatureCard(
@@ -46,6 +48,7 @@ struct HowItWorksView: View {
                     title: "Lightning Fast",
                     description: "Links are cleaned instantly in the background. You won't notice any delay—just cleaner, more private URLs."
                 )
+                .id("feature_lightningFast")
                 .accessibilityIdentifier("featureCard_2")
 
                 FeatureCard(
@@ -53,6 +56,7 @@ struct HowItWorksView: View {
                     title: "Always Working",
                     description: "Once enabled, TokCleaner works automatically on all TikTok links. No need to open the app again."
                 )
+                .id("feature_alwaysWorking")
                 .accessibilityIdentifier("featureCard_3")
 
                 // Example Section
@@ -63,6 +67,7 @@ struct HowItWorksView: View {
                     afterLabel: "After",
                     afterURL: "tiktok.com/@user/video/123"
                 )
+                .id("section_example")
                 .accessibilityIdentifier("urlComparisonCard_example")
 
                 // Privacy Section
@@ -91,12 +96,23 @@ struct HowItWorksView: View {
                         )
                     }
                 }
+                .id("section_privacy")
                 .accessibilityIdentifier("emphasisCard_privacy")
 
                 Spacer()
                     .frame(height: 20)
             }
             .padding(.horizontal, 20)
+        }
+        .accessibilityRotor("Features") {
+            AccessibilityRotorEntry("Automatic Cleaning", id: "feature_automaticCleaning")
+            AccessibilityRotorEntry("What Gets Removed", id: "feature_whatGetsRemoved")
+            AccessibilityRotorEntry("Lightning Fast", id: "feature_lightningFast")
+            AccessibilityRotorEntry("Always Working", id: "feature_alwaysWorking")
+        }
+        .accessibilityRotor("Sections") {
+            AccessibilityRotorEntry("Example", id: "section_example")
+            AccessibilityRotorEntry("Your Privacy", id: "section_privacy")
         }
         .accessibilityIdentifier("howItWorksView")
     }

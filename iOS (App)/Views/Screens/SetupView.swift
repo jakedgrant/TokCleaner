@@ -39,6 +39,7 @@ struct SetupView: View {
                         "Turn on 'Allow Extension'",
                     ]
                 )
+                .id("setupMethod_settings")
                 .accessibilityIdentifier("instructionCard_settings")
 
                 // Method 2: Safari Extensions Menu
@@ -52,6 +53,7 @@ struct SetupView: View {
                         "Enable TokCleaner"
                     ]
                 )
+                .id("setupMethod_safari")
                 .accessibilityIdentifier("instructionCard_safari")
 
                 // Additional Note
@@ -68,6 +70,10 @@ struct SetupView: View {
                     .frame(height: 20)
             }
             .padding(.horizontal, 20)
+        }
+        .accessibilityRotor("Setup Methods") {
+            AccessibilityRotorEntry("Via Settings App", id: "setupMethod_settings")
+            AccessibilityRotorEntry("Via Safari", id: "setupMethod_safari")
         }
         .accessibilityIdentifier("setupView")
     }
