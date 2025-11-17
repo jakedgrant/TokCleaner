@@ -13,6 +13,7 @@ struct SetupView: View {
             VStack(spacing: 24) {
                 Spacer()
                     .frame(height: 20)
+                    .accessibilityHidden(true)
 
                 // Title
                 VStack(spacing: 8) {
@@ -66,6 +67,7 @@ struct SetupView: View {
 
                 Spacer()
                     .frame(height: 20)
+                    .accessibilityHidden(true)
             }
             .padding(.horizontal, 20)
         }

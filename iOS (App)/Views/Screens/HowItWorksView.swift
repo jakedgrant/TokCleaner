@@ -13,6 +13,7 @@ struct HowItWorksView: View {
             VStack(spacing: 28) {
                 Spacer()
                     .frame(height: 20)
+                    .accessibilityHidden(true)
 
                 // Title
                 VStack(spacing: 8) {
@@ -95,6 +96,7 @@ struct HowItWorksView: View {
 
                 Spacer()
                     .frame(height: 20)
+                    .accessibilityHidden(true)
             }
             .padding(.horizontal, 20)
         }
