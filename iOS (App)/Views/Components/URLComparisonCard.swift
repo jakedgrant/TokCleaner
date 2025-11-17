@@ -27,7 +27,8 @@ struct URLComparisonCard: View {
                     iconColor: .red,
                     label: beforeLabel,
                     url: beforeURL,
-                    backgroundColor: Color.red.opacity(0.1)
+                    backgroundColor: Color.red.opacity(0.1),
+                    accessibilityDescription: "Original URL with tracking parameters"
                 )
 
                 // Arrow
@@ -46,7 +47,8 @@ struct URLComparisonCard: View {
                     iconColor: .green,
                     label: afterLabel,
                     url: afterURL,
-                    backgroundColor: Color.green.opacity(0.1)
+                    backgroundColor: Color.green.opacity(0.1),
+                    accessibilityDescription: "Cleaned URL without tracking"
                 )
             }
         }
@@ -68,6 +70,7 @@ private struct URLDisplayBox: View {
     let label: String
     let url: String
     let backgroundColor: Color
+    let accessibilityDescription: String
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
@@ -82,9 +85,7 @@ private struct URLDisplayBox: View {
                     .foregroundColor(.secondary)
             }
             .accessibilityElement(children: .combine)
-            .accessibilityLabel(label == "Before"
-                ? "Original URL with tracking parameters"
-                : "Cleaned URL without tracking")
+            .accessibilityLabel(accessibilityDescription)
 
             Text(url)
                 .font(.system(.caption, design: .monospaced))
