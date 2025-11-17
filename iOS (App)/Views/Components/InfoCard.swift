@@ -37,6 +37,9 @@ struct InfoCard: View {
         .background(backgroundColor)
         .cornerRadius(12)
         .padding(.top, 8)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(title). \(message)")
+        .accessibilityAddTraits(.isStaticText)
     }
 }
 
