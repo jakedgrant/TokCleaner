@@ -24,6 +24,7 @@ struct InstructionCard: View {
                 Text(title)
                     .font(.headline)
                     .fontWeight(.semibold)
+                    .accessibilityAddTraits(.isHeader)
 
                 Spacer()
             }

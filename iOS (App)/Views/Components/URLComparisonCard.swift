@@ -19,6 +19,7 @@ struct URLComparisonCard: View {
             Text(title)
                 .font(.headline)
                 .fontWeight(.semibold)
+                .accessibilityAddTraits(.isHeader)
 
             VStack(alignment: .leading, spacing: 12) {
                 // Before
