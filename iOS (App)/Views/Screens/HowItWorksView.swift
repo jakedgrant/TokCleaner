@@ -30,7 +30,7 @@ struct HowItWorksView: View {
                 FeatureCard(
                     icon: "link.circle.fill",
                     title: "Automatic Cleaning",
-                    description: "When you click a TikTok link, TokCleaner instantly removes tracking parameters before the page loads."
+                    description: "When you click a TikTok link, Tok Cleaner instantly removes tracking parameters before the page loads."
                 )
                 .accessibilityIdentifier("featureCard_0")
 
@@ -51,7 +51,7 @@ struct HowItWorksView: View {
                 FeatureCard(
                     icon: "checkmark.shield.fill",
                     title: "Always Working",
-                    description: "Once enabled, TokCleaner works automatically on all TikTok links. No need to open the app again."
+                    description: "Once enabled, Tok Cleaner works automatically on all TikTok links. No need to open the app again."
                 )
                 .accessibilityIdentifier("featureCard_3")
 
@@ -105,7 +105,7 @@ struct HowItWorksView: View {
 #Preview {
     NavigationView {
         HowItWorksView()
-            .navigationTitle("TokCleaner")
+            .navigationTitle("Tok Cleaner")
             .navigationBarTitleDisplayMode(.large)
     }
 }

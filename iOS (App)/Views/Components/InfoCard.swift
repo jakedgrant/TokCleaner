@@ -49,7 +49,7 @@ struct InfoCard: View {
             icon: "checkmark.circle.fill",
             iconColor: Color("tcCyan"),
             title: "That's it!",
-            message: "Once enabled, TokCleaner will automatically clean tracking parameters from all TikTok links you visit in Safari.",
+            message: "Once enabled, Tok Cleaner will automatically clean tracking parameters from all TikTok links you visit in Safari.",
             backgroundColor: Color(.systemGray6)
         )
 

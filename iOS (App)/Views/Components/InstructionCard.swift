@@ -74,7 +74,7 @@ struct InstructionCard: View {
             "Open the Settings app",
             "Scroll down and tap Safari",
             "Tap Extensions",
-            "Enable TokCleaner"
+            "Enable Tok Cleaner"
         ]
     )
     .padding()

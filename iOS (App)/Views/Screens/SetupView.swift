@@ -35,7 +35,7 @@ struct SetupView: View {
                         "Scroll down to apps",
                         "Scroll down and tap Safari",
                         "Tap Extensions",
-                        "Tap TokCleaner",
+                        "Tap Tok Cleaner",
                         "Turn on 'Allow Extension'",
                     ]
                 )
@@ -49,7 +49,7 @@ struct SetupView: View {
                         "Open Safari and visit any website",
                         "Tap the aA icon in the address bar",
                         "Tap Manage Extensions",
-                        "Enable TokCleaner"
+                        "Enable Tok Cleaner"
                     ]
                 )
                 .accessibilityIdentifier("instructionCard_safari")
@@ -59,7 +59,7 @@ struct SetupView: View {
                     icon: "checkmark.circle.fill",
                     iconColor: .green,
                     title: "That's it!",
-                    message: "Once enabled, TokCleaner will automatically clean tracking parameters from all TikTok links you visit in Safari.",
+                    message: "Once enabled, Tok Cleaner will automatically clean tracking parameters from all TikTok links you visit in Safari.",
                     backgroundColor: Color(.systemGray6)
                 )
                 .accessibilityIdentifier("infoCard_completion")
@@ -76,7 +76,7 @@ struct SetupView: View {
 #Preview {
     NavigationView {
         SetupView()
-            .navigationTitle("TokCleaner")
+            .navigationTitle("Tok Cleaner")
             .navigationBarTitleDisplayMode(.large)
     }
 }

@@ -13,26 +13,26 @@ struct ContentView: View {
             // Setup Tab
             NavigationView {
                 SetupView()
-                    .navigationTitle("TokCleaner")
+                    .navigationTitle("Tok Cleaner")
                     .navigationBarTitleDisplayMode(.large)
             }
             .tabItem {
                 Label("Setup", systemImage: "gear")
             }
             .accessibilityLabel("Setup Instructions")
-            .accessibilityHint("Learn how to enable the TokCleaner extension")
+            .accessibilityHint("Learn how to enable the Tok Cleaner extension")
             .accessibilityIdentifier("setupTab")
 
             // How It Works Tab
             NavigationView {
                 HowItWorksView()
-                    .navigationTitle("TokCleaner")
+                    .navigationTitle("Tok Cleaner")
                     .navigationBarTitleDisplayMode(.large)
             }
             .tabItem {
                 Label("How It Works", systemImage: "info.circle")
             }
-            .accessibilityLabel("How TokCleaner Works")
+            .accessibilityLabel("How Tok Cleaner Works")
             .accessibilityHint("Learn about features and privacy")
             .accessibilityIdentifier("howItWorksTab")
         }

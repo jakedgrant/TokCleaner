@@ -51,7 +51,7 @@ struct FeatureCard: View {
         FeatureCard(
             icon: "link.circle.fill",
             title: "Automatic Cleaning",
-            description: "When you click a TikTok link, TokCleaner instantly removes tracking parameters before the page loads."
+            description: "When you click a TikTok link, Tok Cleaner instantly removes tracking parameters before the page loads."
         )
 
         FeatureCard(
