@@ -30,7 +30,7 @@ struct InstructionCard: View {
 
             // Steps
             VStack(alignment: .leading, spacing: 12) {
-                ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
+                ForEach(Array(steps.enumerated()), id: \.element) { index, step in
                     HStack(alignment: .firstTextBaseline, spacing: 12) {
                         Text("\(index + 1)")
                             .font(.caption)
