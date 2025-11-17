@@ -23,18 +23,19 @@ struct OverlappingImages<Content: View>: View {
     }
     
     var body: some View {
-        
+
         ZStack(alignment: .center) {
             content
                 .foregroundStyle(Color.tcCyan)
                 .offset(y: -offset)
-            
+
             content
                 .foregroundStyle(Color.tcPink)
                 .offset(x: offset)
                 .blendMode(colorScheme == .dark ? .plusLighter : .plusDarker)
         }
         .compositingGroup()
+        .accessibilityHidden(true)  // Hide decorative visual effect from VoiceOver
     }
 }
 
