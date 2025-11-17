@@ -98,6 +98,7 @@ struct HowItWorksView: View {
             }
             .padding(.horizontal, 20)
         }
+        .accessibilityElement(children: .contain)
         .accessibilityIdentifier("howItWorksView")
     }
 }
