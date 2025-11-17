@@ -19,6 +19,7 @@ struct SetupView: View {
                     Text("Enable the Extension")
                         .font(.title)
                         .fontWeight(.bold)
+                        .accessibilityAddTraits(.isHeader)
 
                     Text("Choose one of the methods below")
                         .font(.subheadline)
