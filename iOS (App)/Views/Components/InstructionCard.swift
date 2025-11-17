@@ -12,6 +12,8 @@ struct InstructionCard: View {
     let title: String
     let steps: [String]
 
+    @ScaledMetric private var badgeSize: CGFloat = 24
+
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             // Header
@@ -36,9 +38,9 @@ struct InstructionCard: View {
                             .font(.caption)
                             .fontWeight(.bold)
                             .foregroundColor(.white)
-                            .frame(width: 24, height: 24)
+                            .frame(width: badgeSize, height: badgeSize)
                             .background(Color.accentColor)
-                            .cornerRadius(12)
+                            .cornerRadius(badgeSize / 2)
                             .accessibilityHidden(true)
 
                         Text(step)

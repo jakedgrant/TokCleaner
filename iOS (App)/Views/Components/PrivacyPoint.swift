@@ -12,11 +12,13 @@ struct PrivacyPoint: View {
     let icon: String
     let text: String
 
+    @ScaledMetric private var iconSize: CGFloat = 24
+
     var body: some View {
         HStack(spacing: 12) {
             Image(systemName: icon)
                 .foregroundColor(.green)
-                .frame(width: 24)
+                .frame(width: iconSize)
                 .accessibilityHidden(true)
 
             Text(text)
