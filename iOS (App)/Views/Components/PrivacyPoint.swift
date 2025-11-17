@@ -17,6 +17,7 @@ struct PrivacyPoint: View {
             Image(systemName: icon)
                 .foregroundColor(.green)
                 .frame(width: 24)
+                .accessibilityHidden(true)
 
             Text(text)
                 .font(.subheadline)

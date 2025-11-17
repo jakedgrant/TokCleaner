@@ -39,6 +39,7 @@ struct SetupView: View {
                         "Turn on 'Allow Extension'",
                     ]
                 )
+                .accessibilityIdentifier("instructionCard_settings")
 
                 // Method 2: Safari Extensions Menu
                 InstructionCard(
@@ -51,6 +52,7 @@ struct SetupView: View {
                         "Enable TokCleaner"
                     ]
                 )
+                .accessibilityIdentifier("instructionCard_safari")
 
                 // Additional Note
                 InfoCard(
@@ -60,12 +62,14 @@ struct SetupView: View {
                     message: "Once enabled, TokCleaner will automatically clean tracking parameters from all TikTok links you visit in Safari.",
                     backgroundColor: Color(.systemGray6)
                 )
+                .accessibilityIdentifier("infoCard_completion")
 
                 Spacer()
                     .frame(height: 20)
             }
             .padding(.horizontal, 20)
         }
+        .accessibilityIdentifier("setupView")
     }
 }
 

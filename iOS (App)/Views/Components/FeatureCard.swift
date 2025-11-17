@@ -15,7 +15,7 @@ struct FeatureCard: View {
 
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
-            
+
             OverlappingImages {
                 Image(systemName: icon)
                     .font(.title2)
@@ -40,6 +40,9 @@ struct FeatureCard: View {
             RoundedRectangle(cornerRadius: 16)
                 .stroke(Color(.systemGray5), lineWidth: 1)
         )
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(title). \(description)")
+        .accessibilityAddTraits(.isStaticText)
     }
 }
 

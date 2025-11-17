@@ -20,6 +20,7 @@ struct InfoCard: View {
                 Image(systemName: icon)
                     .foregroundColor(iconColor)
                     .font(.title3)
+                    .accessibilityHidden(true)
                 Text(title)
                     .font(.headline)
                     .fontWeight(.semibold)
@@ -36,6 +37,9 @@ struct InfoCard: View {
         .background(backgroundColor)
         .cornerRadius(12)
         .padding(.top, 8)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(title). \(message)")
+        .accessibilityAddTraits(.isStaticText)
     }
 }
 
