@@ -12,6 +12,8 @@ struct InstructionCard: View {
     let title: String
     let steps: [String]
 
+    @Environment(\.accessibilityIncreaseContrast) var increaseContrast
+
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             // Header
@@ -58,10 +60,10 @@ struct InstructionCard: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color(.systemBackground))
         .cornerRadius(16)
-        .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 2)
+        .shadow(color: Color.black.opacity(increaseContrast ? 0.15 : 0.05), radius: 8, x: 0, y: 2)
         .overlay(
             RoundedRectangle(cornerRadius: 16)
-                .stroke(Color(.systemGray5), lineWidth: 1)
+                .stroke(Color(.systemGray5), lineWidth: increaseContrast ? 2 : 1)
         )
     }
 }
