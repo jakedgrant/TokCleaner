@@ -57,6 +57,13 @@ struct HowItWorksView: View {
                 )
                 .accessibilityIdentifier("featureCard_3")
 
+                FeatureCard(
+                    icon: "safari.fill",
+                    title: "No App Needed",
+                    description: "Watch shared TikTok videos directly in Safari without downloading the app, helping you avoid the rabbit hole of endless scrolling and algorithm-driven content."
+                )
+                .accessibilityIdentifier("featureCard_4")
+
                 // Example Section
                 URLComparisonCard(
                     title: "Example",
