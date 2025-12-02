@@ -51,7 +51,6 @@ struct InstructionCard: View {
 
                         Spacer()
                     }
-                    .accessibilityElement(children: .combine)
                     .accessibilityLabel("Step \(index + 1). \(step)")
                     .accessibilityAddTraits(.isStaticText)
                 }

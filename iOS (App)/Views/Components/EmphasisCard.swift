@@ -43,6 +43,7 @@ struct EmphasisCard<Content: View>: View {
 
             content
         }
+        .accessibilityElement(children: .combine)
         .padding(20)
         .frame(maxWidth: .infinity)
         .background(
