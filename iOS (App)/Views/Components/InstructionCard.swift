@@ -44,14 +44,13 @@ struct InstructionCard: View {
                             .cornerRadius(12)
                             .accessibilityHidden(true)
 
-                        Text(step)
-                            .font(.subheadline)
+                        StyledText(step)
                             .foregroundColor(.primary)
                             .fixedSize(horizontal: false, vertical: true)
 
                         Spacer()
                     }
-                    .accessibilityLabel("Step \(index + 1). \(step)")
+                    .accessibilityLabel("Step \(index + 1). \(stripMarkup(step))")
                     .accessibilityAddTraits(.isStaticText)
                 }
             }
@@ -66,18 +65,42 @@ struct InstructionCard: View {
                 .stroke(Color(.systemGray5), lineWidth: increaseContrast == .increased ? 2 : 1)
         )
     }
+
+    /// Strips markup from text for accessibility labels
+    private func stripMarkup(_ text: String) -> String {
+        var result = text
+        // Remove SF Symbol syntax {{symbol}}
+        result = result.replacing(/\{\{[^}]+\}\}/, with: "")
+        // Remove highlight syntax **text** and keep the text
+        result = result.replacing(/\*\*([^*]+)\*\*/, with: { match in
+            String(match.1)
+        })
+        return result.trimmingCharacters(in: .whitespaces)
+    }
 }
 
 #Preview {
-    InstructionCard(
-        icon: "gear",
-        title: "Via Settings App",
-        steps: [
-            "Open the Settings app",
-            "Scroll down and tap Safari",
-            "Tap Extensions",
-            "Enable TokCleaner"
-        ]
-    )
+    VStack(spacing: 20) {
+        InstructionCard(
+            icon: "gear",
+            title: "Via Settings App",
+            steps: [
+                "Open the {{gear}} **Settings** app",
+                "Scroll down and tap **Safari**",
+                "Tap {{puzzlepiece.extension}} **Extensions**",
+                "Enable **TokCleaner**"
+            ]
+        )
+
+        InstructionCard(
+            icon: "safari",
+            title: "With Symbols",
+            steps: [
+                "Tap the {{aA}} icon in Safari",
+                "Select **Manage Extensions**",
+                "Tap {{checkmark.circle}} to confirm"
+            ]
+        )
+    }
     .padding()
 }
