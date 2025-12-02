@@ -35,6 +35,7 @@ struct FeatureCard: View {
             }
         }
         .padding(20)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color(.systemBackground))
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(increaseContrast == .increased ? 0.15 : 0.05), radius: 8, x: 0, y: 2)
