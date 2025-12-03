@@ -97,6 +97,23 @@ struct MoreView: View {
                 .accessibilityHint("Opens the App Store to leave a review")
                 
                 
+                // Support Link
+                NavigationLink(destination: SupportView()) {
+                    HStack(spacing: 12) {
+                        OverlappingImages {
+                            Image(systemName: "questionmark.circle")
+                                .font(.title3)
+                        }
+
+                        Text("Support")
+                            .font(.headline)
+
+                        Spacer()
+                    }
+                }
+                .accessibilityLabel("Support")
+                .accessibilityHint("View support information and how to report issues")
+
                 // Privacy Policy Link
                 NavigationLink(destination: PrivacyPolicyView()) {
                     HStack(spacing: 12) {

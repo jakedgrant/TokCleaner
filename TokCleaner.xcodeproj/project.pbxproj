@@ -14,6 +14,7 @@
 		2333C7C22EBEFD51007D8A89 /* TokCleaner Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2333C7C12EBEFD51007D8A89 /* TokCleaner Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2333C7CC2EBEFD51007D8A89 /* TokCleaner Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2333C7CB2EBEFD51007D8A89 /* TokCleaner Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		23F7C30A2EDEB47900AB5812 /* PRIVACY.md in Resources */ = {isa = PBXBuildFile; fileRef = 23F7C3092EDEB47900AB5812 /* PRIVACY.md */; };
+		23F7C3B02EDFE5A600AB5812 /* SUPPORT.md in Resources */ = {isa = PBXBuildFile; fileRef = 23F7C3AF2EDFE5A600AB5812 /* SUPPORT.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		2333C7C12EBEFD51007D8A89 /* TokCleaner Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TokCleaner Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2333C7CB2EBEFD51007D8A89 /* TokCleaner Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TokCleaner Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F7C3092EDEB47900AB5812 /* PRIVACY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PRIVACY.md; sourceTree = "<group>"; };
+		23F7C3AF2EDFE5A600AB5812 /* SUPPORT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SUPPORT.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -228,6 +230,7 @@
 		2333C7872EBEFD4E007D8A89 = {
 			isa = PBXGroup;
 			children = (
+				23F7C3AF2EDFE5A600AB5812 /* SUPPORT.md */,
 				23F7C3092EDEB47900AB5812 /* PRIVACY.md */,
 				230CA7512EC9405600C75A4B /* TokCleaner.icon */,
 				230A65602EBF05C600CDCA2B /* TokCleaner Extension (iOS).entitlements */,
@@ -400,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				230CA7522EC9405600C75A4B /* TokCleaner.icon in Resources */,
+				23F7C3B02EDFE5A600AB5812 /* SUPPORT.md in Resources */,
 				23F7C30A2EDEB47900AB5812 /* PRIVACY.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
