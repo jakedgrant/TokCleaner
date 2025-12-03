@@ -26,7 +26,7 @@ struct ContentView: View {
             // How It Works Tab
             NavigationView {
                 HowItWorksView()
-                    .navigationTitle("TokCleaner")
+                    .navigationTitle("How It Works")
                     .navigationBarTitleDisplayMode(.large)
             }
             .tabItem {
@@ -35,6 +35,19 @@ struct ContentView: View {
             .accessibilityLabel("How TokCleaner Works")
             .accessibilityHint("Learn about features and privacy")
             .accessibilityIdentifier("howItWorksTab")
+
+            // More Tab
+            NavigationView {
+                MoreView()
+                    .navigationTitle("More")
+                    .navigationBarTitleDisplayMode(.inline)
+            }
+            .tabItem {
+                Label("More", systemImage: "ellipsis")
+            }
+            .accessibilityLabel("More")
+            .accessibilityHint("About TokCleaner, share, and review")
+            .accessibilityIdentifier("moreTab")
         }
     }
 }

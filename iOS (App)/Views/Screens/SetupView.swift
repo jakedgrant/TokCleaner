@@ -11,20 +11,13 @@ struct SetupView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 24) {
-                Spacer()
-                    .frame(height: 20)
-                    .accessibilityHidden(true)
-
+                
                 // Title
                 VStack(spacing: 8) {
-                    Text("Enable the Extension")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .accessibilityAddTraits(.isHeader)
-
-                    Text("Choose one of the methods below")
+                    Text("Choose one of the methods below to enable the extension")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(.bottom, 8)
 
