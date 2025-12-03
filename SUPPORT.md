@@ -1,61 +1,47 @@
 # Support
 
-Need help with TokCleaner? I'm here to assist you!
+Need help with TokCleaner? I'm here to help!
 
 ## Getting Support
 
-If you're experiencing issues or have questions about TokCleaner, please reach out:
+Choose whichever method works best for you:
 
-**GitHub Issues**: [Submit an issue](https://github.com/jakedgrant/TokCleaner/issues)
+- **Email**: [support@tokcleaner.app](mailto:support@tokcleaner.app?subject=TokCleaner%20Support)
+- **GitHub Issues**: [Submit an issue](https://github.com/jakedgrant/TokCleaner/issues) (if you have a GitHub account)
 
-## How to Report Issues
+## Reporting Issues
 
-To help me resolve your issue as quickly as possible, please include the following information:
+Don't worry about getting everything perfect! Just tell me what happened and I'll work with you to figure it out. That said, here are some things that really help me understand and fix issues faster:
 
-### Required Information
+### What Helps Most
 
-1. **Detailed Steps to Reproduce**
-   - List the exact steps you took before encountering the issue
-   - Be as specific as possible (e.g., "Opened Safari, navigated to TikTok video, tapped Share button...")
+- **Describe what happened** - Just tell me what you were doing and what went wrong
+- **Include the TikTok link** - The specific video URL helps me test with the same content
+- **Screenshots or screen recording** - A picture is worth a thousand words! If you saw an error or something unexpected, a screenshot really helps
+- **What you expected** - What did you think would happen?
 
-2. **TikTok Link**
-   - Include the specific TikTok video URL you were trying to view
-   - This helps me test with the exact same content
+### Tips for a Great Bug Report
 
-3. **Screenshots or Screen Recording**
-   - Visual evidence is extremely helpful
-   - Include screenshots of any error messages
-   - If possible, include a screen recording showing the issue
+The app can automatically include your device and app version info if you use the "Report Issue" button in the Support screen (coming soon!). But if you're emailing, here's what's helpful to mention:
 
-4. **Device Information**
-   - iOS version (e.g., iOS 17.1)
-   - Device model (e.g., iPhone 14 Pro)
-   - TokCleaner app version
+- Your device model (e.g., iPhone 14 Pro)
+- Your iOS version (Settings > General > About > iOS Version)
+- What you were trying to do
+- What actually happened instead
 
-5. **Expected vs Actual Behavior**
-   - What did you expect to happen?
-   - What actually happened?
+### Example
 
-### Example Report
+Here's what a helpful report might look like, but don't stress about the format:
 
-```
-**Issue**: Video not loading in app
+> I tried to watch this TikTok video: https://www.tiktok.com/@username/video/1234567890
+>
+> I tapped the share button, selected TokCleaner, but the app opened to a blank screen. I expected the video to start playing.
+>
+> I'm on an iPhone 13 with iOS 17.2.
+>
+> [screenshot attached]
 
-**Steps to Reproduce**:
-1. Opened TikTok app
-2. Found video at https://www.tiktok.com/@username/video/1234567890
-3. Tapped Share button
-4. Selected TokCleaner from share sheet
-5. App opened but video didn't load
-
-**Device**: iPhone 13, iOS 17.2
-**App Version**: 1.0.0
-
-**Expected**: Video should load and play
-**Actual**: App opened to blank screen
-
-**Screenshot**: [attached]
-```
+That's it! I can work with whatever information you can provide.
 
 ## Common Issues
 
