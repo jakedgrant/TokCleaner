@@ -10,7 +10,7 @@ import SwiftUI
 struct HowItWorksView: View {
     var body: some View {
         ScrollView {
-            VStack(spacing: 28) {
+            VStack(spacing: 24) {
 
                 // Title
                 VStack(spacing: 8) {

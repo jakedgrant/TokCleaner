@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+// Custom alignment guide for aligning icon with title
+extension VerticalAlignment {
+    private enum TitleCenterAlignment: AlignmentID {
+        static func defaultValue(in context: ViewDimensions) -> CGFloat {
+            context[VerticalAlignment.center]
+        }
+    }
+
+    static let titleCenterAlignment = VerticalAlignment(TitleCenterAlignment.self)
+}
+
 // MARK: - Feature Card Component
 struct FeatureCard: View {
     let icon: String
@@ -16,17 +27,19 @@ struct FeatureCard: View {
     @Environment(\.colorSchemeContrast) var increaseContrast
 
     var body: some View {
-        HStack(alignment: .top, spacing: 16) {
+        HStack(alignment: .titleCenterAlignment, spacing: 16) {
 
             OverlappingImages {
                 Image(systemName: icon)
                     .font(.title2)
             }
+            .alignmentGuide(.titleCenterAlignment) { d in d[VerticalAlignment.center] }
 
             VStack(alignment: .leading, spacing: 6) {
                 Text(title)
                     .font(.headline)
                     .fontWeight(.semibold)
+                    .alignmentGuide(.titleCenterAlignment) { d in d[VerticalAlignment.center] }
 
                 Text(description)
                     .font(.subheadline)

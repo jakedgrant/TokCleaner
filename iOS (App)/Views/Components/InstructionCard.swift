@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+// Custom alignment guide for aligning icon with step numbers
+extension HorizontalAlignment {
+    private enum StepIconAlignment: AlignmentID {
+        static func defaultValue(in context: ViewDimensions) -> CGFloat {
+            context[HorizontalAlignment.leading]
+        }
+    }
+
+    static let stepIconAlignment = HorizontalAlignment(StepIconAlignment.self)
+}
+
 struct InstructionCard: View {
     let icon: String
     let title: String
@@ -15,13 +26,14 @@ struct InstructionCard: View {
     @Environment(\.colorSchemeContrast) var increaseContrast
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .stepIconAlignment, spacing: 16) {
             // Header
             HStack(spacing: 12) {
                 OverlappingImages {
                     Image(systemName: icon)
                         .font(.title2)
                 }
+                .alignmentGuide(.stepIconAlignment) { d in d[HorizontalAlignment.center] }
 
                 Text(title)
                     .font(.headline)
@@ -32,7 +44,7 @@ struct InstructionCard: View {
             }
 
             // Steps
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .stepIconAlignment, spacing: 12) {
                 ForEach(Array(steps.enumerated()), id: \.element) { index, step in
                     HStack(alignment: .firstTextBaseline, spacing: 12) {
                         Text("\(index + 1)")
@@ -42,6 +54,7 @@ struct InstructionCard: View {
                             .frame(width: 24, height: 24)
                             .background(Color.accentColor)
                             .cornerRadius(12)
+                            .alignmentGuide(.stepIconAlignment) { d in d[HorizontalAlignment.center] }
                             .accessibilityHidden(true)
 
                         StyledText(step)
