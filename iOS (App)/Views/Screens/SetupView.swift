@@ -11,20 +11,13 @@ struct SetupView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 24) {
-                Spacer()
-                    .frame(height: 20)
-                    .accessibilityHidden(true)
-
+                
                 // Title
                 VStack(spacing: 8) {
-                    Text("Enable the Extension")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .accessibilityAddTraits(.isHeader)
-
-                    Text("Choose one of the methods below")
+                    Text("Choose one of the methods below to enable the extension")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(.bottom, 8)
 
@@ -34,10 +27,10 @@ struct SetupView: View {
                     title: "Via Settings App",
                     steps: [
                         "Open the Settings app",
-                        "Scroll down to apps",
-                        "Scroll down and tap Safari",
-                        "Tap Extensions",
-                        "Tap TokCleaner",
+                        "Scroll down to {{square.grid.3x3.square}} **Apps**",
+                        "Scroll down and tap {{safari.fill}} **Safari**",
+                        "Tap **Extensions**",
+                        "Tap {{eraser.line.dashed.fill}} **TokCleaner**",
                         "Turn on 'Allow Extension'",
                     ]
                 )
@@ -48,10 +41,13 @@ struct SetupView: View {
                     icon: "safari",
                     title: "Via Safari",
                     steps: [
-                        "Open Safari and visit any website",
-                        "Tap the aA icon in the address bar",
-                        "Tap Manage Extensions",
-                        "Enable TokCleaner"
+                        "Open **Safari** and visit **tiktok.com**",
+                        "Tap the {{text.page}} icon in the address bar",
+                        "Tap {{puzzlepiece.extension}} **Manage Extensions**",
+                        "Enable **TokCleaner**",
+                        "Tap the {{checkmark}} **button**",
+                        "Tap {{eraser.line.dashed.fill}} **TokCleaner**",
+                        "Tap **Always Allow...**",
                     ]
                 )
                 .accessibilityIdentifier("instructionCard_safari")
@@ -72,6 +68,7 @@ struct SetupView: View {
             }
             .padding(.horizontal, 20)
         }
+        .accessibilityElement(children: .contain)
         .accessibilityIdentifier("setupView")
     }
 }

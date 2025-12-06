@@ -10,24 +10,17 @@ import SwiftUI
 struct HowItWorksView: View {
     var body: some View {
         ScrollView {
-            VStack(spacing: 28) {
-                Spacer()
-                    .frame(height: 20)
-                    .accessibilityHidden(true)
+            VStack(spacing: 24) {
 
                 // Title
                 VStack(spacing: 8) {
-                    Text("How It Works")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .accessibilityAddTraits(.isHeader)
-
                     Text("Automatic link cleaning in Safari")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(.bottom, 8)
-
+                
                 // Feature Cards
                 FeatureCard(
                     icon: "link.circle.fill",
@@ -56,6 +49,13 @@ struct HowItWorksView: View {
                     description: "Once enabled, TokCleaner works automatically on all TikTok links. No need to open the app again."
                 )
                 .accessibilityIdentifier("featureCard_3")
+
+                FeatureCard(
+                    icon: "safari.fill",
+                    title: "No App Needed",
+                    description: "Watch shared TikTok videos directly in Safari without downloading the app, helping you avoid the rabbit hole of endless scrolling and algorithm-driven content."
+                )
+                .accessibilityIdentifier("featureCard_4")
 
                 // Example Section
                 URLComparisonCard(
@@ -103,6 +103,7 @@ struct HowItWorksView: View {
             }
             .padding(.horizontal, 20)
         }
+        .accessibilityElement(children: .contain)
         .accessibilityIdentifier("howItWorksView")
     }
 }

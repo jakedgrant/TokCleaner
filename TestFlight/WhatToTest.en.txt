@@ -1,0 +1,11 @@
+Welcome to TokCleaner TestFlight!
+
+Please test the following:
+- Safari extension installation and activation
+- TikTok content filtering functionality
+- Settings and preferences
+- Overall app stability
+
+Report any issues or feedback through TestFlight or directly to the development team.
+
+Thank you for testing!
