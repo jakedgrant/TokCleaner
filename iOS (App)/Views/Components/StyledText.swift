@@ -11,7 +11,7 @@ import SwiftUI
 ///
 /// Syntax:
 /// - SF Symbols: `{{symbol_name}}` - Renders an inline SF Symbol
-/// - Highlighted text: `**text**` - Applies the overlapping red/blue effect
+/// - Highlighted text: `**text**` - Applies a highlight effect with overlapping cyan/pink rectangles
 ///
 /// Example: "Tap the {{checkmark.circle}} **Done** button"
 struct StyledText: View {
@@ -130,23 +130,33 @@ struct StyledText: View {
             if reduceMotion {
                 // Simplified version for users with motion sensitivity
                 Text(text)
-                    .foregroundStyle(Color.tcCyan)
+                    .padding(.horizontal, 4)
+                    .padding(.vertical, 2)
+                    .foregroundStyle(colorScheme == .dark ? .black : .white)
                     .fontWeight(.semibold)
+                    .background(Color.tcCyan)
+                    .cornerRadius(4)
             } else {
-                // Full overlapping effect
-                ZStack(alignment: .center) {
-                    Text(text)
-                        .foregroundStyle(Color.tcCyan)
-                        .fontWeight(.semibold)
-                        .offset(y: -0.8)
+                // Highlight effect with overlapping rectangles
+                Text(text)
+                    .padding(.horizontal, 4)
+                    .padding(.vertical, 2)
+                    .foregroundStyle(colorScheme == .dark ? .black : .white)
+                    .blendMode(colorScheme == .dark ? .plusDarker : .plusLighter)
+                    .fontWeight(.semibold)
+                    .background {
+                        ZStack(alignment: .center) {
+                            RoundedRectangle(cornerRadius: 4)
+                                .fill(Color.tcCyan)
+                                .offset(y: -0.8)
 
-                    Text(text)
-                        .foregroundStyle(Color.tcPink)
-                        .fontWeight(.semibold)
-                        .offset(x: 0.8)
-                        .blendMode(colorScheme == .dark ? .plusLighter : .plusDarker)
-                }
-                .compositingGroup()
+                            RoundedRectangle(cornerRadius: 4)
+                                .fill(Color.tcPink)
+                                .offset(x: 0.8)
+                                .blendMode(colorScheme == .dark ? .plusLighter : .plusDarker)
+                        }
+                        .compositingGroup()
+                    }
             }
         }
         .bold()
