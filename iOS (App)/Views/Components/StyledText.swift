@@ -7,6 +7,52 @@
 
 import SwiftUI
 
+/// A wrapping horizontal stack that flows content across multiple lines
+struct WrappingHStack: Layout {
+    var spacing: CGFloat = 0
+
+    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+        let result = layout(proposal: proposal, subviews: subviews)
+        return result.size
+    }
+
+    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+        let result = layout(proposal: proposal, subviews: subviews)
+        for (index, position) in result.positions.enumerated() {
+            subviews[index].place(at: CGPoint(x: bounds.minX + position.x, y: bounds.minY + position.y), proposal: .unspecified)
+        }
+    }
+
+    private func layout(proposal: ProposedViewSize, subviews: Subviews) -> (size: CGSize, positions: [CGPoint]) {
+        let maxWidth = proposal.replacingUnspecifiedDimensions().width
+        var positions: [CGPoint] = []
+        var currentX: CGFloat = 0
+        var currentY: CGFloat = 0
+        var lineHeight: CGFloat = 0
+        var totalHeight: CGFloat = 0
+        var totalWidth: CGFloat = 0
+
+        for subview in subviews {
+            let size = subview.sizeThatFits(.unspecified)
+
+            // If adding this view would exceed maxWidth, move to next line
+            if currentX > 0 && currentX + size.width > maxWidth {
+                currentX = 0
+                currentY += lineHeight + spacing
+                lineHeight = 0
+            }
+
+            positions.append(CGPoint(x: currentX, y: currentY))
+            currentX += size.width
+            lineHeight = max(lineHeight, size.height)
+            totalWidth = max(totalWidth, currentX)
+            totalHeight = currentY + lineHeight
+        }
+
+        return (CGSize(width: totalWidth, height: totalHeight), positions)
+    }
+}
+
 /// A view that renders text with embedded SF Symbols and highlighted text effects.
 ///
 /// Syntax:
@@ -90,7 +136,7 @@ struct StyledText: View {
             break
         }
 
-        return HStack(spacing: 0) {
+        return WrappingHStack(spacing: 0) {
             ForEach(0..<components.count, id: \.self) { index in
                 components[index]
             }
