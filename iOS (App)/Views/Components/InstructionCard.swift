@@ -65,6 +65,7 @@ struct InstructionCard: View {
                     }
                     .accessibilityLabel("Step \(index + 1). \(stripMarkup(step))")
                     .accessibilityAddTraits(.isStaticText)
+                    .dynamicTypeSize(...DynamicTypeSize.accessibility1)
                 }
             }
         }
