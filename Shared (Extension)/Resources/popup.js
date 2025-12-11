@@ -61,26 +61,26 @@ async function checkCurrentPage() {
         if (tabs.length > 0) {
             const url = tabs[0].url;
 
-            // Check if it's a TikTok page
-            if (url.includes('tiktok.com')) {
+            // Check if it's a supported social media page
+            if (url.includes('tiktok.com') || url.includes('instagram.com') || url.includes('youtube.com')) {
                 const urlObj = new URL(url);
 
                 if (urlObj.search) {
                     // Has query parameters (shouldn't happen if extension works)
-                    pageStatus.className = 'page-info tiktok';
+                    pageStatus.className = 'page-info social';
                     pageIcon.textContent = '⚠️';
-                    pageMessage.textContent = 'TikTok page with tracking parameters detected';
+                    pageMessage.textContent = 'Social media page with tracking parameters detected';
                 } else {
-                    // Clean TikTok URL
+                    // Clean URL
                     pageStatus.className = 'page-info clean';
                     pageIcon.textContent = '✓';
-                    pageMessage.textContent = 'TikTok page is clean';
+                    pageMessage.textContent = 'Social media page is clean';
                 }
             } else {
-                // Not a TikTok page
+                // Not a supported social media page
                 pageStatus.className = 'page-info';
                 pageIcon.textContent = '📍';
-                pageMessage.textContent = 'Not a TikTok page';
+                pageMessage.textContent = 'Not a supported social media page';
             }
         }
     } catch (error) {

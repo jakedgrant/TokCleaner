@@ -37,7 +37,7 @@ struct HowItWorksView: View {
                             FeatureCard(
                                 icon: "link.circle.fill",
                                 title: "Automatic Cleaning",
-                                description: "When you click a TikTok link, TokCleaner instantly removes tracking parameters before the page loads."
+                                description: "When you click a social media link, TokCleaner instantly removes tracking parameters before the page loads."
                             )
                             .accessibilityIdentifier("featureCard_0")
 
@@ -51,7 +51,7 @@ struct HowItWorksView: View {
                             FeatureCard(
                                 icon: "safari.fill",
                                 title: "No App Needed",
-                                description: "Watch shared TikTok videos directly in Safari without downloading the app, helping you avoid the rabbit hole of endless scrolling and algorithm-driven content."
+                                description: "Watch shared videos directly in Safari without downloading apps, helping you avoid the rabbit hole of endless scrolling and algorithm-driven content."
                             )
                             .accessibilityIdentifier("featureCard_4")
 
@@ -97,16 +97,16 @@ struct HowItWorksView: View {
                             FeatureCard(
                                 icon: "checkmark.shield.fill",
                                 title: "Always Working",
-                                description: "Once enabled, TokCleaner works automatically on all TikTok links. No need to open the app again."
+                                description: "Once enabled, TokCleaner works automatically on all social media links. No need to open the app again."
                             )
                             .accessibilityIdentifier("featureCard_3")
 
                             URLComparisonCard(
                                 title: "Example",
                                 beforeLabel: "Before",
-                                beforeURL: "tiktok.com/@user/video/123?is_from_webapp=1&sender_device=pc&utm_source=share",
+                                beforeURL: "socialmedia.com/video/123?is_from_webapp=1&sender_device=pc&utm_source=share",
                                 afterLabel: "After",
-                                afterURL: "tiktok.com/@user/video/123"
+                                afterURL: "socialmedia.com/video/123"
                             )
                             .accessibilityIdentifier("urlComparisonCard_example")
                         }
@@ -118,7 +118,7 @@ struct HowItWorksView: View {
                         FeatureCard(
                             icon: "link.circle.fill",
                             title: "Automatic Cleaning",
-                            description: "When you click a TikTok link, TokCleaner instantly removes tracking parameters before the page loads."
+                            description: "When you click a social media link, TokCleaner instantly removes tracking parameters before the page loads."
                         )
                         .accessibilityIdentifier("featureCard_0")
 
@@ -139,23 +139,23 @@ struct HowItWorksView: View {
                         FeatureCard(
                             icon: "checkmark.shield.fill",
                             title: "Always Working",
-                            description: "Once enabled, TokCleaner works automatically on all TikTok links. No need to open the app again."
+                            description: "Once enabled, TokCleaner works automatically on all social media links. No need to open the app again."
                         )
                         .accessibilityIdentifier("featureCard_3")
 
                         FeatureCard(
                             icon: "safari.fill",
                             title: "No App Needed",
-                            description: "Watch shared TikTok videos directly in Safari without downloading the app, helping you avoid the rabbit hole of endless scrolling and algorithm-driven content."
+                            description: "Watch shared videos directly in Safari without downloading apps, helping you avoid the rabbit hole of endless scrolling and algorithm-driven content."
                         )
                         .accessibilityIdentifier("featureCard_4")
 
                         URLComparisonCard(
                             title: "Example",
                             beforeLabel: "Before",
-                            beforeURL: "tiktok.com/@user/video/123?is_from_webapp=1&sender_device=pc&utm_source=share",
+                            beforeURL: "socialmedia.com/video/123?is_from_webapp=1&sender_device=pc&utm_source=share",
                             afterLabel: "After",
-                            afterURL: "tiktok.com/@user/video/123"
+                            afterURL: "socialmedia.com/video/123"
                         )
                         .accessibilityIdentifier("urlComparisonCard_example")
 

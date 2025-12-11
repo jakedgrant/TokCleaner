@@ -61,7 +61,7 @@ struct SupportView: View {
 
         ---
         Please describe your issue above this line.
-        Include the TikTok link if relevant, and attach any screenshots.
+        Include the social media link if relevant, and attach any screenshots.
         ---
 
         Device Information (automatically generated):

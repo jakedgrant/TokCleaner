@@ -4,7 +4,7 @@
         "description": "The display name for the extension."
     },
     "extension_description": {
-        "message": "Removes tracking parameters from TikTok URLs",
+        "message": "Removes tracking parameters from social media URLs",
         "description": "Description of what the extension does."
     }
 }

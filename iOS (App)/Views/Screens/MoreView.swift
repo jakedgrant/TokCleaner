@@ -38,7 +38,7 @@ struct MoreView: View {
                     
                     // Thank You Message
                     VStack(alignment: .leading, spacing: 16) {
-                        Text("Thank you for using TokCleaner! We appreciate you taking the time to download and use our app to protect your privacy while browsing TikTok links.")
+                        Text("Thank you for using TokCleaner! We appreciate you taking the time to download and use our app to protect your privacy while browsing social media links.")
                             .font(.body)
                             .foregroundColor(.secondary)
                             .multilineTextAlignment(.center)

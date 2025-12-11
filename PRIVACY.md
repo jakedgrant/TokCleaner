@@ -4,7 +4,7 @@
 
 ## What Our Extension Does
 
-TokCleaner is a Safari extension for iOS that removes tracking and query parameters from TikTok URLs to provide a cleaner, more private browsing experience.
+TokCleaner is a Safari extension for iOS that removes tracking and query parameters from social media URLs to provide a cleaner, more private browsing experience.
 
 ## Data Collection
 
@@ -18,11 +18,11 @@ TokCleaner is a Safari extension for iOS that removes tracking and query paramet
 
 ## How the Extension Works
 
-Our extension uses Safari's declarativeNetRequest API to automatically remove query parameters (everything after the "?" in a URL) from TikTok links. This processing happens entirely on your device using Safari's built-in capabilities.
+Our extension uses Safari's declarativeNetRequest API to automatically remove query parameters (everything after the "?" in a URL) from social media links. This processing happens entirely on your device using Safari's built-in capabilities.
 
 **Example:**
-- Before: `https://www.tiktok.com/@user/video/123?ref=share&tracker=abc`
-- After: `https://www.tiktok.com/@user/video/123`
+- Before: `https://www.socialmedia.com/video/123?ref=share&tracker=abc`
+- After: `https://www.socialmedia.com/video/123`
 
 All URL processing occurs locally on your device. No data leaves your device, and we have no servers that receive any information.
 
@@ -30,10 +30,10 @@ All URL processing occurs locally on your device. No data leaves your device, an
 
 The extension requests the following permissions:
 
-- **Access to tiktok.com domains**: Required to detect and process TikTok URLs
+- **Access to social media domains**: Required to detect and process social media URLs
 - **declarativeNetRequestWithHostAccess**: Required to modify URLs before they load
 
-These permissions are used solely for the purpose of removing query parameters from TikTok URLs.
+These permissions are used solely for the purpose of removing query parameters from social media URLs.
 
 ## Third-Party Data Sharing
 
@@ -62,4 +62,4 @@ If you have any questions about this privacy policy, please contact:
 
 ---
 
-*This extension is not affiliated with, endorsed by, or associated with TikTok or ByteDance Ltd.*
+*This extension is not affiliated with, endorsed by, or associated with any social media platform.*

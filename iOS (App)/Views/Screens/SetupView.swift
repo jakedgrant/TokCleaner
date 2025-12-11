@@ -53,7 +53,7 @@ struct SetupView: View {
                             icon: "safari",
                             title: "Via Safari",
                             steps: [
-                                "Open **Safari** and visit **tiktok.com**",
+                                "Open **Safari** and visit any social media site",
                                 "Tap the {{text.page}} icon in the address bar",
                                 "Tap {{puzzlepiece.extension}} **Manage Extensions**",
                                 "Enable **TokCleaner**",
@@ -71,7 +71,7 @@ struct SetupView: View {
                         icon: "checkmark.circle.fill",
                         iconColor: .green,
                         title: "That's it!",
-                        message: "Once enabled, TokCleaner will automatically clean tracking parameters from all TikTok links you visit in Safari.",
+                        message: "Once enabled, TokCleaner will automatically clean tracking parameters from social media links you visit in Safari.",
                         backgroundColor: Color(.systemGray6)
                     )
                     .accessibilityIdentifier("infoCard_completion")
@@ -98,7 +98,7 @@ struct SetupView: View {
                             icon: "safari",
                             title: "Via Safari",
                             steps: [
-                                "Open **Safari** and visit **tiktok.com**",
+                                "Open **Safari** and visit any social media site",
                                 "Tap the {{text.page}} icon in the address bar",
                                 "Tap {{puzzlepiece.extension}} **Manage Extensions**",
                                 "Enable **TokCleaner**",
@@ -114,7 +114,7 @@ struct SetupView: View {
                             icon: "checkmark.circle.fill",
                             iconColor: .green,
                             title: "That's it!",
-                            message: "Once enabled, TokCleaner will automatically clean tracking parameters from all TikTok links you visit in Safari.",
+                            message: "Once enabled, TokCleaner will automatically clean tracking parameters from social media links you visit in Safari.",
                             backgroundColor: Color(.systemGray6)
                         )
                         .accessibilityIdentifier("infoCard_completion")

@@ -106,9 +106,9 @@ private struct URLDisplayBox: View {
     URLComparisonCard(
         title: "Example",
         beforeLabel: "Before",
-        beforeURL: "tiktok.com/@user/video/123?is_from_webapp=1&sender_device=pc&utm_source=share",
+        beforeURL: "socialmedia.com/video/123?is_from_webapp=1&sender_device=pc&utm_source=share",
         afterLabel: "After",
-        afterURL: "tiktok.com/@user/video/123"
+        afterURL: "socialmedia.com/video/123"
     )
     .padding()
 }

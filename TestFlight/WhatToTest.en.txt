@@ -2,7 +2,7 @@ Welcome to TokCleaner TestFlight!
 
 Please test the following:
 - Safari extension installation and activation
-- TikTok content filtering functionality
+- Social media link cleaning functionality
 - Settings and preferences
 - Overall app stability
 

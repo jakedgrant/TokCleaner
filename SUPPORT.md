@@ -16,7 +16,7 @@ Don't worry about getting everything perfect! Just tell me what happened and I'l
 ### What Helps Most
 
 - **Describe what happened** - Just tell me what you were doing and what went wrong
-- **Include the TikTok link** - The specific video URL helps me test with the same content
+- **Include the social media link** - The specific URL helps me test with the same content (TikTok, Instagram, YouTube, etc.)
 - **Screenshots or screen recording** - A picture is worth a thousand words! If you saw an error or something unexpected, a screenshot really helps
 - **What you expected** - What did you think would happen?
 
@@ -33,9 +33,9 @@ The app can automatically include your device and app version info if you use th
 
 Here's what a helpful report might look like, but don't stress about the format:
 
-> I tried to watch this TikTok video: https://www.tiktok.com/@username/video/1234567890
+> I tried to watch this video: https://www.example.com/video/1234567890
 >
-> I tapped the share button, selected TokCleaner, but the app opened to a blank screen. I expected the video to start playing.
+> I clicked the link in Safari, but the extension didn't seem to remove the tracking parameters. I expected a cleaner URL.
 >
 > I'm on an iPhone 13 with iOS 17.2.
 >
@@ -49,13 +49,14 @@ Before submitting an issue, check if your problem is listed here:
 
 ### Video Won't Load
 - Ensure you have a stable internet connection
-- Try copying the TikTok link and pasting it directly into Safari
-- Verify the TikTok video is still available (not deleted)
+- Try copying the link and pasting it directly into Safari
+- Verify the content is still available (not deleted)
 
-### Share Extension Not Appearing
+### Extension Not Working
 - Make sure TokCleaner is installed and opened at least once
 - Restart your device
-- Check if the share extension is enabled in iOS Settings
+- Check if the extension is enabled in Safari Settings
+- Verify the extension has permission for the website
 
 ### App Crashes
 - Make sure you're running the latest version

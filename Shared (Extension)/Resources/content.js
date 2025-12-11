@@ -1,4 +1,4 @@
-// Content script runs on TikTok pages at document_start (earliest possible)
+// Content script runs on social media pages at document_start (earliest possible)
 
 // Check if URL has query parameters and redirect IMMEDIATELY
 const url = new URL(window.location.href);
