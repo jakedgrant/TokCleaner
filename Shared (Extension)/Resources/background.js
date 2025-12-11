@@ -7,7 +7,7 @@
 import { CONFIG } from './constants.js';
 
 // Extension initialization
-console.log('TokCleaner background service worker initialized');
+console.log('Paramless background service worker initialized');
 console.log('Supported platforms:', Object.values(CONFIG.SUPPORTED_PLATFORMS));
 
 // Future: Add any background tasks here (e.g., stats tracking, settings sync, etc.)

@@ -3,7 +3,7 @@ import { CONFIG } from './constants.js';
 // Sanitize error messages to prevent information disclosure
 function sanitizeErrorMessage(error) {
     // Log detailed error for debugging (console only, not shown to user)
-    console.error('TokCleaner error:', error);
+    console.error('Paramless error:', error);
 
     // Return generic user-friendly message
     if (error.message.includes('permission')) {

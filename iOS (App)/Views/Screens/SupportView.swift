@@ -76,7 +76,7 @@ struct SupportView: View {
             .replacingOccurrences(of: "\n", with: "%0D%0A")
             .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
 
-        let subject = "TokCleaner Support Request".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let subject = "Paramless Support Request".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
 
         if let url = URL(string: "mailto:support@tokcleaner.app?subject=\(subject)&body=\(encodedBody)") {
             UIApplication.shared.open(url)

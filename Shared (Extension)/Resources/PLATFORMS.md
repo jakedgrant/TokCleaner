@@ -1,6 +1,6 @@
 # Supported Platforms Configuration
 
-This document explains how to add or remove supported social media platforms in TokCleaner.
+This document explains how to add or remove supported social media platforms in Paramless.
 
 ## Single Source of Truth
 

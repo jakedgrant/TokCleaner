@@ -81,7 +81,7 @@
 
     "action": {
         "default_icon": "images/icon-48.png",
-        "default_title": "TokCleaner - Remove Tracking Parameters",
+        "default_title": "Paramless - Clean Social Media Links",
         "default_popup": "popup.html"
     }
 }

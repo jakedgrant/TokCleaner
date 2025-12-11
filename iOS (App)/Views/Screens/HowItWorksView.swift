@@ -37,7 +37,7 @@ struct HowItWorksView: View {
                             FeatureCard(
                                 icon: "link.circle.fill",
                                 title: "Automatic Cleaning",
-                                description: "When you click a social media link, TokCleaner instantly removes tracking parameters before the page loads."
+                                description: "When you click a social media link, Paramless instantly removes tracking parameters before the page loads."
                             )
                             .accessibilityIdentifier("featureCard_0")
 
@@ -97,7 +97,7 @@ struct HowItWorksView: View {
                             FeatureCard(
                                 icon: "checkmark.shield.fill",
                                 title: "Always Working",
-                                description: "Once enabled, TokCleaner works automatically on all social media links. No need to open the app again."
+                                description: "Once enabled, Paramless works automatically on all social media links. No need to open the app again."
                             )
                             .accessibilityIdentifier("featureCard_3")
 
@@ -118,7 +118,7 @@ struct HowItWorksView: View {
                         FeatureCard(
                             icon: "link.circle.fill",
                             title: "Automatic Cleaning",
-                            description: "When you click a social media link, TokCleaner instantly removes tracking parameters before the page loads."
+                            description: "When you click a social media link, Paramless instantly removes tracking parameters before the page loads."
                         )
                         .accessibilityIdentifier("featureCard_0")
 
@@ -139,7 +139,7 @@ struct HowItWorksView: View {
                         FeatureCard(
                             icon: "checkmark.shield.fill",
                             title: "Always Working",
-                            description: "Once enabled, TokCleaner works automatically on all social media links. No need to open the app again."
+                            description: "Once enabled, Paramless works automatically on all social media links. No need to open the app again."
                         )
                         .accessibilityIdentifier("featureCard_3")
 
@@ -203,7 +203,7 @@ struct HowItWorksView: View {
 #Preview {
     NavigationView {
         HowItWorksView()
-            .navigationTitle("TokCleaner")
+            .navigationTitle("Paramless")
             .navigationBarTitleDisplayMode(.large)
     }
 }

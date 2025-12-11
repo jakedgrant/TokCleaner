@@ -4,7 +4,7 @@ This document explains the tracking parameter removal rules for each supported p
 
 ## How It Works
 
-TokCleaner uses Safari's `declarativeNetRequest` API to remove tracking parameters from URLs **before** the page loads. The rules are defined in `rules.json` and are platform-specific to ensure we only remove tracking parameters while preserving functional parameters.
+Paramless uses Safari's `declarativeNetRequest` API to remove tracking parameters from URLs **before** the page loads. The rules are defined in `rules.json` and are platform-specific to ensure we only remove tracking parameters while preserving functional parameters.
 
 ### Architecture
 

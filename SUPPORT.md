@@ -1,13 +1,13 @@
 # Support
 
-Need help with TokCleaner? I'm here to help!
+Need help with Paramless? I'm here to help!
 
 ## Getting Support
 
 Choose whichever method works best for you:
 
-- **Email**: [support@tokcleaner.app](mailto:support@tokcleaner.app?subject=TokCleaner%20Support)
-- **GitHub Issues**: [Submit an issue](https://github.com/jakedgrant/TokCleaner/issues) (if you have a GitHub account)
+- **Email**: [support@paramless.app](mailto:support@paramless.app?subject=Paramless%20Support)
+- **GitHub Issues**: [Submit an issue](https://github.com/jakedgrant/Paramless/issues) (if you have a GitHub account)
 
 ## Reporting Issues
 
@@ -53,7 +53,7 @@ Before submitting an issue, check if your problem is listed here:
 - Verify the content is still available (not deleted)
 
 ### Extension Not Working
-- Make sure TokCleaner is installed and opened at least once
+- Make sure Paramless is installed and opened at least once
 - Restart your device
 - Check if the extension is enabled in Safari Settings
 - Verify the extension has permission for the website
@@ -65,7 +65,7 @@ Before submitting an issue, check if your problem is listed here:
 
 ## Feature Requests
 
-Have an idea for a new feature? I'd love to hear it! Submit a feature request through [GitHub Issues](https://github.com/jakedgrant/TokCleaner/issues) with the label "enhancement".
+Have an idea for a new feature? I'd love to hear it! Submit a feature request through [GitHub Issues](https://github.com/jakedgrant/Paramless/issues) with the label "enhancement".
 
 ## Response Time
 
@@ -73,4 +73,4 @@ I'll do my best to respond to issues within 24-48 hours. Please be patient as th
 
 ## Privacy
 
-TokCleaner respects your privacy. No personal data or viewing history is collected. For more information, see the [Privacy Policy](PRIVACY.md).
+Paramless respects your privacy. No personal data or viewing history is collected. For more information, see the [Privacy Policy](PRIVACY.md).

@@ -1,10 +1,10 @@
-# Privacy Policy for TokCleaner
+# Privacy Policy for Paramless
 
 **Last Updated:** November 7, 2025
 
 ## What Our Extension Does
 
-TokCleaner is a Safari extension for iOS that removes tracking and query parameters from social media URLs to provide a cleaner, more private browsing experience.
+Paramless is a Safari extension for iOS that removes tracking and query parameters from social media URLs to provide a cleaner, more private browsing experience.
 
 ## Data Collection
 
@@ -52,7 +52,7 @@ We may update this privacy policy from time to time. Any changes will be posted 
 You can disable this extension at any time by:
 1. Opening Settings on your iOS device
 2. Navigating to Safari → Extensions
-3. Toggling TokCleaner off
+3. Toggling Paramless off
 
 ## Contact
 

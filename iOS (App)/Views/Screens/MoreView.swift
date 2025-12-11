@@ -24,9 +24,9 @@ struct MoreView: View {
                             Image(systemName: "eraser.line.dashed.fill")
                                 .font(.system(size: 64))
                         }
-                        .accessibilityLabel("TokCleaner app icon")
+                        .accessibilityLabel("Paramless app icon")
                         
-                        Text("TokCleaner")
+                        Text("Paramless")
                             .font(.title)
                             .fontWeight(.bold)
                         
@@ -38,12 +38,12 @@ struct MoreView: View {
                     
                     // Thank You Message
                     VStack(alignment: .leading, spacing: 16) {
-                        Text("Thank you for using TokCleaner! We appreciate you taking the time to download and use our app to protect your privacy while browsing social media links.")
+                        Text("Thank you for using Paramless! We appreciate you taking the time to download and use our app to protect your privacy while browsing social media links.")
                             .font(.body)
                             .foregroundColor(.secondary)
                             .multilineTextAlignment(.center)
                         
-                        Text("If you find TokCleaner useful, please consider sharing it with others and leaving a review on the App Store. Your support helps us continue improving the app!")
+                        Text("If you find Paramless useful, please consider sharing it with others and leaving a review on the App Store. Your support helps us continue improving the app!")
                             .font(.body)
                             .foregroundColor(.secondary)
                             .multilineTextAlignment(.center)
@@ -64,7 +64,7 @@ struct MoreView: View {
                                 .font(.title3)
                         }
                         
-                        Text("Share TokCleaner")
+                        Text("Share Paramless")
                             .font(.headline)
                         
                         Spacer()
@@ -72,7 +72,7 @@ struct MoreView: View {
                     .buttonStyle(.plain)
                     .foregroundColor(.primary)
                 }
-                .accessibilityLabel("Share TokCleaner")
+                .accessibilityLabel("Share Paramless")
                 .accessibilityHint("Opens share sheet to share the app with others")
                 
                 // Review Button
@@ -147,7 +147,7 @@ struct MoreView: View {
 #Preview {
     NavigationView {
         MoreView()
-            .navigationTitle("TokCleaner")
+            .navigationTitle("Paramless")
             .navigationBarTitleDisplayMode(.large)
     }
 }

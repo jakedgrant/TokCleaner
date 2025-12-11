@@ -8,7 +8,7 @@
 import SwiftUI
 import SafariServices
 
-let extensionBundleIdentifier = "com.jacobgrant.TokCleaner.Extension"
+let extensionBundleIdentifier = "com.jacobgrant.Paramless.Extension"
 
 struct ContentView: View {
     @State private var extensionEnabled: Bool? = nil
@@ -62,22 +62,22 @@ struct ContentView: View {
         if useSettingsInsteadOfPreferences {
             if let enabled = enabled {
                 if enabled {
-                    return "TokCleaner's extension is currently on. You can turn it off in the Extensions section of Safari Settings."
+                    return "Paramless's extension is currently on. You can turn it off in the Extensions section of Safari Settings."
                 } else {
-                    return "TokCleaner's extension is currently off. You can turn it on in the Extensions section of Safari Settings."
+                    return "Paramless's extension is currently off. You can turn it on in the Extensions section of Safari Settings."
                 }
             } else {
-                return "You can turn on TokCleaner's extension in the Extensions section of Safari Settings."
+                return "You can turn on Paramless's extension in the Extensions section of Safari Settings."
             }
         } else {
             if let enabled = enabled {
                 if enabled {
-                    return "TokCleaner's extension is currently on. You can turn it off in Safari Extensions preferences."
+                    return "Paramless's extension is currently on. You can turn it off in Safari Extensions preferences."
                 } else {
-                    return "TokCleaner's extension is currently off. You can turn it on in Safari Extensions preferences."
+                    return "Paramless's extension is currently off. You can turn it on in Safari Extensions preferences."
                 }
             } else {
-                return "You can turn on TokCleaner's extension in Safari Extensions preferences."
+                return "You can turn on Paramless's extension in Safari Extensions preferences."
             }
         }
     }

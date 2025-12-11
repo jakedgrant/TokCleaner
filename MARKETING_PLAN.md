@@ -1,4 +1,4 @@
-# TokCleaner Marketing Plan
+# Paramless Marketing Plan
 
 ## Pricing Strategy
 
@@ -11,7 +11,7 @@
 
 ### App Store Copy
 
-**Name:** TokCleaner
+**Name:** Paramless
 
 **Subtitle:** Remove TikTok URL Trackers
 
@@ -21,7 +21,7 @@ Clean TikTok Links. Protect Your Privacy.
 
 One-time payment. No subscription. No data collection.
 
-TokCleaner removes tracking parameters from TikTok URLs automatically in Safari. Cleaner links, more private browsing.
+Paramless removes tracking parameters from TikTok URLs automatically in Safari. Cleaner links, more private browsing.
 
 FEATURES:
 • Automatic tracking parameter removal
@@ -32,13 +32,13 @@ FEATURES:
 • Works on all TikTok URLs
 
 HOW IT WORKS:
-Enable the extension in Settings → Safari → Extensions, and TokCleaner does the rest. Every TikTok link you visit is automatically cleaned, removing tracking parameters for a better browsing experience.
+Enable the extension in Settings → Safari → Extensions, and Paramless does the rest. Every TikTok link you visit is automatically cleaned, removing tracking parameters for a better browsing experience.
 
 PRIVACY FIRST:
 We don't collect, store, or transmit any data. All URL processing happens locally on your device. Your browsing stays private.
 
 EASY SETUP:
-Settings → Safari → Extensions → Enable TokCleaner
+Settings → Safari → Extensions → Enable Paramless
 
 Buy once, use forever. Perfect for privacy-conscious users who want cleaner, tracker-free TikTok links.
 ```
@@ -80,7 +80,7 @@ tiktok, privacy, safari, extension, tracking, cleaner, url, secure, link, share
   - Be transparent about pricing
 
 - r/ios (1.9M members)
-  - Title: "New Safari extension: TokCleaner removes TikTok URL trackers"
+  - Title: "New Safari extension: Paramless removes TikTok URL trackers"
   - Focus on functionality and ease of use
 
 - r/apple (4.8M members)
@@ -100,7 +100,7 @@ tiktok, privacy, safari, extension, tracking, cleaner, url, secure, link, share
 - Explain why $1.99 (respect for no subscription model)
 
 **Hacker News:**
-- Show HN: TokCleaner - Safari extension to remove TikTok tracking
+- Show HN: Paramless - Safari extension to remove TikTok tracking
 - Post on a Tuesday or Wednesday morning (9-11am PT)
 - Be ready to engage in comments immediately
 
@@ -114,12 +114,12 @@ tiktok, privacy, safari, extension, tracking, cleaner, url, secure, link, share
 **Goal:** Organic discovery
 
 **Blog Posts (on GitHub Pages or Medium):**
-1. "Why I Built TokCleaner: Taking Back Privacy on TikTok"
+1. "Why I Built Paramless: Taking Back Privacy on TikTok"
 2. "How TikTok Tracking Parameters Work (And Why You Should Remove Them)"
 3. "Building My First iOS Safari Extension: Lessons Learned"
 
 **Twitter/X Strategy:**
-- Create @TokCleaner handle (if available)
+- Create @Paramless handle (if available)
 - Post about privacy, tracking, and clean web
 - Engage with privacy advocates
 - Share tips about online privacy
@@ -265,7 +265,7 @@ Submit to:
 
 **Monetization for v2.0:**
 - Keep TikTok free for existing users (grandfather clause)
-- Charge $4.99 for "TokCleaner Pro" with all platforms
+- Charge $4.99 for "Paramless Pro" with all platforms
 - OR offer as $2.99 in-app purchase upgrade
 
 ---
@@ -332,7 +332,7 @@ Submit to:
 - People tired of subscription apps
 
 **Elevator Pitch:**
-"TokCleaner is a Safari extension that automatically removes tracking parameters from TikTok URLs. For $1.99, you get lifetime privacy protection with no subscriptions and zero data collection. It's like an ad blocker, but for URL tracking."
+"Paramless is a Safari extension that automatically removes tracking parameters from TikTok URLs. For $1.99, you get lifetime privacy protection with no subscriptions and zero data collection. It's like an ad blocker, but for URL tracking."
 
 ---
 

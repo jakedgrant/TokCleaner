@@ -1,10 +1,10 @@
 {
     "extension_name": {
-        "message": "TokCleaner",
+        "message": "Paramless",
         "description": "The display name for the extension."
     },
     "extension_description": {
-        "message": "Removes tracking parameters from social media URLs",
+        "message": "Clean social media links - remove tracking parameters",
         "description": "Description of what the extension does."
     }
 }

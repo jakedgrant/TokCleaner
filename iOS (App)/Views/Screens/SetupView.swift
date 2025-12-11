@@ -41,7 +41,7 @@ struct SetupView: View {
                                 "Scroll down to {{square.grid.3x3.square}} **Apps**",
                                 "Scroll down and tap {{safari.fill}} **Safari**",
                                 "Tap **Extensions**",
-                                "Tap {{eraser.line.dashed.fill}} **TokCleaner**",
+                                "Tap {{eraser.line.dashed.fill}} **Paramless**",
                                 "Turn on 'Allow Extension'",
                             ]
                         )
@@ -56,9 +56,9 @@ struct SetupView: View {
                                 "Open **Safari** and visit any social media site",
                                 "Tap the {{text.page}} icon in the address bar",
                                 "Tap {{puzzlepiece.extension}} **Manage Extensions**",
-                                "Enable **TokCleaner**",
+                                "Enable **Paramless**",
                                 "Tap the {{checkmark}} **button**",
-                                "Tap {{eraser.line.dashed.fill}} **TokCleaner**",
+                                "Tap {{eraser.line.dashed.fill}} **Paramless**",
                                 "Tap **Always Allow...**",
                             ]
                         )
@@ -71,7 +71,7 @@ struct SetupView: View {
                         icon: "checkmark.circle.fill",
                         iconColor: .green,
                         title: "That's it!",
-                        message: "Once enabled, TokCleaner will automatically clean tracking parameters from social media links you visit in Safari.",
+                        message: "Once enabled, Paramless will automatically clean tracking parameters from social media links you visit in Safari.",
                         backgroundColor: Color(.systemGray6)
                     )
                     .accessibilityIdentifier("infoCard_completion")
@@ -87,7 +87,7 @@ struct SetupView: View {
                                 "Scroll down to {{square.grid.3x3.square}} **Apps**",
                                 "Scroll down and tap {{safari.fill}} **Safari**",
                                 "Tap **Extensions**",
-                                "Tap {{eraser.line.dashed.fill}} **TokCleaner**",
+                                "Tap {{eraser.line.dashed.fill}} **Paramless**",
                                 "Turn on 'Allow Extension'",
                             ]
                         )
@@ -101,9 +101,9 @@ struct SetupView: View {
                                 "Open **Safari** and visit any social media site",
                                 "Tap the {{text.page}} icon in the address bar",
                                 "Tap {{puzzlepiece.extension}} **Manage Extensions**",
-                                "Enable **TokCleaner**",
+                                "Enable **Paramless**",
                                 "Tap the {{checkmark}} **button**",
-                                "Tap {{eraser.line.dashed.fill}} **TokCleaner**",
+                                "Tap {{eraser.line.dashed.fill}} **Paramless**",
                                 "Tap **Always Allow...**",
                             ]
                         )
@@ -114,7 +114,7 @@ struct SetupView: View {
                             icon: "checkmark.circle.fill",
                             iconColor: .green,
                             title: "That's it!",
-                            message: "Once enabled, TokCleaner will automatically clean tracking parameters from social media links you visit in Safari.",
+                            message: "Once enabled, Paramless will automatically clean tracking parameters from social media links you visit in Safari.",
                             backgroundColor: Color(.systemGray6)
                         )
                         .accessibilityIdentifier("infoCard_completion")
@@ -135,7 +135,7 @@ struct SetupView: View {
 #Preview {
     NavigationView {
         SetupView()
-            .navigationTitle("TokCleaner")
+            .navigationTitle("Paramless")
             .navigationBarTitleDisplayMode(.large)
     }
 }

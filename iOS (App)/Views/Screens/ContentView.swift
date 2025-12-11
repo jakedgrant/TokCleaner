@@ -13,12 +13,12 @@ struct ContentView: View {
             Tab("Setup", systemImage: "gear") {
                 NavigationStack {
                     SetupView()
-                        .navigationTitle("TokCleaner")
+                        .navigationTitle("Paramless")
                         .navigationBarTitleDisplayMode(.large)
                 }
             }
             .accessibilityLabel("Setup Instructions")
-            .accessibilityHint("Learn how to enable the TokCleaner extension")
+            .accessibilityHint("Learn how to enable the Paramless extension")
             .accessibilityIdentifier("setupTab")
 
             Tab("How It Works", systemImage: "info.circle") {
@@ -28,7 +28,7 @@ struct ContentView: View {
                         .navigationBarTitleDisplayMode(.large)
                 }
             }
-            .accessibilityLabel("How TokCleaner Works")
+            .accessibilityLabel("How Paramless Works")
             .accessibilityHint("Learn about features and privacy")
             .accessibilityIdentifier("howItWorksTab")
 
@@ -40,7 +40,7 @@ struct ContentView: View {
                 }
             }
             .accessibilityLabel("More")
-            .accessibilityHint("About TokCleaner, share, and review")
+            .accessibilityHint("About Paramless, share, and review")
             .accessibilityIdentifier("moreTab")
         }
         .tabViewStyle(.tabBarOnly)

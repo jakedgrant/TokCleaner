@@ -102,7 +102,7 @@ struct InstructionCard: View {
                 "Open the {{gear}} **Settings** app",
                 "Scroll down and tap **Safari**",
                 "Tap {{puzzlepiece.extension}} **Extensions**",
-                "Enable **TokCleaner**"
+                "Enable **Paramless**"
             ]
         )
 

@@ -212,7 +212,7 @@ struct StyledText: View {
 #Preview {
     VStack(alignment: .leading, spacing: 16) {
         StyledText("Tap the {{checkmark.circle}} button")
-        StyledText("Enable **TokCleaner** extension")
+        StyledText("Enable **Paramless** extension")
         StyledText("Tap the {{aA}} icon and select **Manage Extensions**")
         StyledText("Turn on **Allow Extension**")
     }

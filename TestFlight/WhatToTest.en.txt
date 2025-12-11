@@ -1,4 +1,4 @@
-Welcome to TokCleaner TestFlight!
+Welcome to Paramless TestFlight!
 
 Please test the following:
 - Safari extension installation and activation
