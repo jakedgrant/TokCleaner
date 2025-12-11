@@ -1,15 +1,13 @@
 // Content script runs on social media pages at document_start (earliest possible)
+// Note: URL parameter cleaning is handled by declarativeNetRequest rules in rules.json
+// This script only shows a confirmation banner after parameters have been removed
 
-// Check if URL has query parameters and redirect IMMEDIATELY
+// Check if we should show the banner (only if URL was cleaned)
 const url = new URL(window.location.href);
-if (url.search) {
-    // Build clean URL
-    const cleanUrl = `${url.protocol}//${url.host}${url.pathname}${url.hash || ''}`;
+const urlHadTracking = document.referrer && new URL(document.referrer).search && !url.search;
 
-    // Redirect immediately before page renders
-    window.location.replace(cleanUrl);
-} else {
-    // Only show banner after DOM is ready
+// Only show banner after DOM is ready and if tracking was removed
+if (urlHadTracking) {
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', showBanner);
     } else {

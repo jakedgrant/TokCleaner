@@ -35,12 +35,40 @@
     ],
 
     "host_permissions": [
-        "*://*.tiktok.com/*"
+        "*://*.tiktok.com/*",
+        "*://*.instagram.com/*",
+        "*://*.instagr.am/*",
+        "*://*.youtube.com/*",
+        "*://*.youtu.be/*",
+        "*://*.facebook.com/*",
+        "*://*.fb.me/*",
+        "*://*.twitter.com/*",
+        "*://*.x.com/*",
+        "*://*.t.co/*",
+        "*://*.linkedin.com/*",
+        "*://*.lnkd.in/*",
+        "*://*.reddit.com/*",
+        "*://*.redd.it/*"
     ],
 
     "content_scripts": [
         {
-            "matches": ["*://*.tiktok.com/*"],
+            "matches": [
+                "*://*.tiktok.com/*",
+                "*://*.instagram.com/*",
+                "*://*.instagr.am/*",
+                "*://*.youtube.com/*",
+                "*://*.youtu.be/*",
+                "*://*.facebook.com/*",
+                "*://*.fb.me/*",
+                "*://*.twitter.com/*",
+                "*://*.x.com/*",
+                "*://*.t.co/*",
+                "*://*.linkedin.com/*",
+                "*://*.lnkd.in/*",
+                "*://*.reddit.com/*",
+                "*://*.redd.it/*"
+            ],
             "js": ["constants.js", "content.js"],
             "run_at": "document_start"
         }

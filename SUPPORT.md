@@ -16,7 +16,7 @@ Don't worry about getting everything perfect! Just tell me what happened and I'l
 ### What Helps Most
 
 - **Describe what happened** - Just tell me what you were doing and what went wrong
-- **Include the social media link** - The specific URL helps me test with the same content (TikTok, Instagram, YouTube, etc.)
+- **Include the social media link** - The specific URL helps me test with the same content (works with TikTok, Instagram, YouTube, Facebook, Twitter/X, LinkedIn, Reddit, etc.)
 - **Screenshots or screen recording** - A picture is worth a thousand words! If you saw an error or something unexpected, a screenshot really helps
 - **What you expected** - What did you think would happen?
 

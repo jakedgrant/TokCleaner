@@ -10,9 +10,6 @@
                         "removeParams": [
                             "is_from_webapp",
                             "sender_device",
-                            "utm_source",
-                            "utm_medium",
-                            "utm_campaign",
                             "u_code",
                             "refer",
                             "referer_url",
@@ -33,6 +30,170 @@
         },
         "condition": {
             "urlFilter": "*tiktok.com/*",
+            "resourceTypes": ["main_frame"]
+        }
+    },
+    {
+        "id": 2,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "transform": {
+                    "queryTransform": {
+                        "removeParams": [
+                            "si",
+                            "feature",
+                            "kw",
+                            "app",
+                            "fbclid",
+                            "gclid"
+                        ]
+                    }
+                }
+            }
+        },
+        "condition": {
+            "urlFilter": "*youtube.com/*|*youtu.be/*",
+            "resourceTypes": ["main_frame"]
+        }
+    },
+    {
+        "id": 3,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "transform": {
+                    "queryTransform": {
+                        "removeParams": [
+                            "igshid",
+                            "igsh",
+                            "img_index"
+                        ]
+                    }
+                }
+            }
+        },
+        "condition": {
+            "urlFilter": "*instagram.com/*|*instagr.am/*",
+            "resourceTypes": ["main_frame"]
+        }
+    },
+    {
+        "id": 4,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "transform": {
+                    "queryTransform": {
+                        "removeParams": [
+                            "fbclid",
+                            "mibextid"
+                        ]
+                    }
+                }
+            }
+        },
+        "condition": {
+            "urlFilter": "*facebook.com/*|*fb.me/*",
+            "resourceTypes": ["main_frame"]
+        }
+    },
+    {
+        "id": 5,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "transform": {
+                    "queryTransform": {
+                        "removeParams": [
+                            "s",
+                            "t"
+                        ]
+                    }
+                }
+            }
+        },
+        "condition": {
+            "urlFilter": "*twitter.com/*|*x.com/*|*t.co/*",
+            "resourceTypes": ["main_frame"]
+        }
+    },
+    {
+        "id": 6,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "transform": {
+                    "queryTransform": {
+                        "removeParams": [
+                            "trk",
+                            "trkInfo",
+                            "refId",
+                            "originalReferer"
+                        ]
+                    }
+                }
+            }
+        },
+        "condition": {
+            "urlFilter": "*linkedin.com/*|*lnkd.in/*",
+            "resourceTypes": ["main_frame"]
+        }
+    },
+    {
+        "id": 7,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "transform": {
+                    "queryTransform": {
+                        "removeParams": [
+                            "ref",
+                            "ref_source",
+                            "share"
+                        ]
+                    }
+                }
+            }
+        },
+        "condition": {
+            "urlFilter": "*reddit.com/*|*redd.it/*",
+            "resourceTypes": ["main_frame"]
+        }
+    },
+    {
+        "id": 100,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "transform": {
+                    "queryTransform": {
+                        "removeParams": [
+                            "utm_source",
+                            "utm_medium",
+                            "utm_campaign",
+                            "utm_term",
+                            "utm_content",
+                            "fbclid",
+                            "gclid",
+                            "msclkid",
+                            "_ga",
+                            "mc_cid",
+                            "mc_eid"
+                        ]
+                    }
+                }
+            }
+        },
+        "condition": {
+            "urlFilter": "*tiktok.com/*|*instagram.com/*|*instagr.am/*|*youtube.com/*|*youtu.be/*|*facebook.com/*|*fb.me/*|*twitter.com/*|*x.com/*|*t.co/*|*linkedin.com/*|*lnkd.in/*|*reddit.com/*|*redd.it/*",
             "resourceTypes": ["main_frame"]
         }
     }

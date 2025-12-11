@@ -61,8 +61,12 @@ async function checkCurrentPage() {
         if (tabs.length > 0) {
             const url = tabs[0].url;
 
-            // Check if it's a supported social media page
-            if (url.includes('tiktok.com') || url.includes('instagram.com') || url.includes('youtube.com')) {
+            // Check if it's a supported social media page using centralized config
+            const isSupportedPlatform = Object.values(CONFIG.SUPPORTED_PLATFORMS).some(platform =>
+                url.includes(platform)
+            );
+
+            if (isSupportedPlatform) {
                 const urlObj = new URL(url);
 
                 if (urlObj.search) {
