@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		230CA7522EC9405600C75A4B /* TokCleaner.icon in Resources */ = {isa = PBXBuildFile; fileRef = 230CA7512EC9405600C75A4B /* TokCleaner.icon */; };
-		230CA7532EC9405600C75A4B /* TokCleaner.icon in Resources */ = {isa = PBXBuildFile; fileRef = 230CA7512EC9405600C75A4B /* TokCleaner.icon */; };
-		230CA7542EC9405600C75A4B /* TokCleaner.icon in Resources */ = {isa = PBXBuildFile; fileRef = 230CA7512EC9405600C75A4B /* TokCleaner.icon */; };
-		230CA7552EC9405600C75A4B /* TokCleaner.icon in Resources */ = {isa = PBXBuildFile; fileRef = 230CA7512EC9405600C75A4B /* TokCleaner.icon */; };
 		2333C7C22EBEFD51007D8A89 /* TokCleaner Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2333C7C12EBEFD51007D8A89 /* TokCleaner Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2333C7CC2EBEFD51007D8A89 /* TokCleaner Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2333C7CB2EBEFD51007D8A89 /* TokCleaner Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		23A6769D2EEDE47600BE703B /* Paramless.icon in Resources */ = {isa = PBXBuildFile; fileRef = 23A6769C2EEDE47500BE703B /* Paramless.icon */; };
+		23A6769E2EEDE47600BE703B /* Paramless.icon in Resources */ = {isa = PBXBuildFile; fileRef = 23A6769C2EEDE47500BE703B /* Paramless.icon */; };
 		23F7C30A2EDEB47900AB5812 /* PRIVACY.md in Resources */ = {isa = PBXBuildFile; fileRef = 23F7C3092EDEB47900AB5812 /* PRIVACY.md */; };
 		23F7C3B02EDFE5A600AB5812 /* SUPPORT.md in Resources */ = {isa = PBXBuildFile; fileRef = 23F7C3AF2EDFE5A600AB5812 /* SUPPORT.md */; };
 /* End PBXBuildFile section */
@@ -62,11 +60,11 @@
 /* Begin PBXFileReference section */
 		230A655F2EBF057A00CDCA2B /* TokCleaner (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TokCleaner (iOS).entitlements"; sourceTree = "<group>"; };
 		230A65602EBF05C600CDCA2B /* TokCleaner Extension (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TokCleaner Extension (iOS).entitlements"; sourceTree = "<group>"; };
-		230CA7512EC9405600C75A4B /* TokCleaner.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = TokCleaner.icon; sourceTree = "<group>"; };
 		2333C7A42EBEFD51007D8A89 /* TokCleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokCleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2333C7B62EBEFD51007D8A89 /* TokCleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokCleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2333C7C12EBEFD51007D8A89 /* TokCleaner Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TokCleaner Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2333C7CB2EBEFD51007D8A89 /* TokCleaner Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TokCleaner Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23A6769C2EEDE47500BE703B /* Paramless.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = Paramless.icon; sourceTree = "<group>"; };
 		23F7C3092EDEB47900AB5812 /* PRIVACY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PRIVACY.md; sourceTree = "<group>"; };
 		23F7C3AF2EDFE5A600AB5812 /* SUPPORT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SUPPORT.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,9 +228,9 @@
 		2333C7872EBEFD4E007D8A89 = {
 			isa = PBXGroup;
 			children = (
+				23A6769C2EEDE47500BE703B /* Paramless.icon */,
 				23F7C3AF2EDFE5A600AB5812 /* SUPPORT.md */,
 				23F7C3092EDEB47900AB5812 /* PRIVACY.md */,
-				230CA7512EC9405600C75A4B /* TokCleaner.icon */,
 				230A65602EBF05C600CDCA2B /* TokCleaner Extension (iOS).entitlements */,
 				230A655F2EBF057A00CDCA2B /* TokCleaner (iOS).entitlements */,
 				2333C78C2EBEFD4E007D8A89 /* Shared (App) */,
@@ -402,9 +400,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				230CA7522EC9405600C75A4B /* TokCleaner.icon in Resources */,
 				23F7C3B02EDFE5A600AB5812 /* SUPPORT.md in Resources */,
 				23F7C30A2EDEB47900AB5812 /* PRIVACY.md in Resources */,
+				23A6769D2EEDE47600BE703B /* Paramless.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +410,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				230CA7542EC9405600C75A4B /* TokCleaner.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +417,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				230CA7552EC9405600C75A4B /* TokCleaner.icon in Resources */,
+				23A6769E2EEDE47600BE703B /* Paramless.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +425,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				230CA7532EC9405600C75A4B /* TokCleaner.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,13 +478,14 @@
 		2333C7F12EBEFD51007D8A89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Paramless;
 				CODE_SIGN_ENTITLEMENTS = "TokCleaner Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PWBLH7P4Y4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "TokCleaner Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "Paramless Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -517,13 +514,14 @@
 		2333C7F22EBEFD51007D8A89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Paramless;
 				CODE_SIGN_ENTITLEMENTS = "TokCleaner Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PWBLH7P4Y4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "TokCleaner Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "Paramless Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -553,7 +551,7 @@
 		2333C7F62EBEFD51007D8A89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = TokCleaner;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Paramless;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "TokCleaner (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -561,7 +559,7 @@
 				DEVELOPMENT_TEAM = PWBLH7P4Y4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = TokCleaner;
+				INFOPLIST_KEY_CFBundleDisplayName = Paramless;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -597,7 +595,7 @@
 		2333C7F72EBEFD51007D8A89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = TokCleaner;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Paramless;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "TokCleaner (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -605,7 +603,7 @@
 				DEVELOPMENT_TEAM = PWBLH7P4Y4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = TokCleaner;
+				INFOPLIST_KEY_CFBundleDisplayName = Paramless;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -650,7 +648,7 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "TokCleaner Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "Paramless Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -686,7 +684,7 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "TokCleaner Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "Paramless Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -724,7 +722,7 @@
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = TokCleaner;
+				INFOPLIST_KEY_CFBundleDisplayName = Paramless;
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -765,7 +763,7 @@
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = TokCleaner;
+				INFOPLIST_KEY_CFBundleDisplayName = Paramless;
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
