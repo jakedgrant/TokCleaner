@@ -153,9 +153,9 @@ struct HowItWorksView: View {
                         URLComparisonCard(
                             title: "Example",
                             beforeLabel: "Before",
-                            beforeURL: "socialmedia.com/video/123?is_from_webapp=1&sender_device=pc&utm_source=share",
+                            beforeURL: "example.com/video/123?is_from_webapp=1&sender_device=pc&utm_source=share",
                             afterLabel: "After",
-                            afterURL: "socialmedia.com/video/123"
+                            afterURL: "example.com/video/123"
                         )
                         .accessibilityIdentifier("urlComparisonCard_example")
 

@@ -20,11 +20,12 @@ struct MoreView: View {
                     
                     // App Icon, Name, and Version
                     VStack(spacing: 16) {
-                        OverlappingImages {
-                            Image(systemName: "eraser.line.dashed.fill")
-                                .font(.system(size: 64))
-                        }
-                        .accessibilityLabel("Paramless app icon")
+                        Image("LargeIcon")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 80, height: 80)
+                            .clipShape(.rect(cornerRadius: 16))
+                            .accessibilityLabel("Paramless app icon")
                         
                         Text("Paramless")
                             .font(.title)
