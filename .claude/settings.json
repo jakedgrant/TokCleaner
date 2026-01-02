@@ -1,0 +1,20 @@
+{
+  "enabledPlugins": {
+    "programming-swift-skill@the-unofficial-swift-programming-language-skill": true,
+    "apple-platform-build-tools@apple-platform-build-tools-claude-code-plugin": true
+  },
+  "extraKnownMarketplaces": {
+    "the-unofficial-swift-programming-language-skill": {
+      "source": {
+        "source": "github",
+        "repo": "kylehughes/the-unofficial-swift-programming-language-skill"
+      }
+    },
+    "apple-platform-build-tools-claude-code-plugin": {
+      "source": {
+        "source": "github",
+        "repo": "kylehughes/apple-platform-build-tools-claude-code-plugin"
+      }
+    }
+  }
+}
