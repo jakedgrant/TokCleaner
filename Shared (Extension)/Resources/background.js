@@ -68,3 +68,29 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 browser.tabs.onRemoved.addListener((tabId) => {
     redirectedTabs.delete(tabId);
 });
+
+// X/Twitter -> xcancel.com redirect (opt-in, off by default).
+// The "xcancel_redirect_rules" ruleset is declared disabled in manifest.json;
+// this keeps its enabled state in sync with the user's stored preference.
+async function syncXcancelRuleset() {
+    try {
+        const stored = await browser.storage.local.get({ [CONFIG.XCANCEL_STORAGE_KEY]: false });
+        const enabled = stored[CONFIG.XCANCEL_STORAGE_KEY] === true;
+
+        await browser.declarativeNetRequest.updateEnabledRulesets({
+            enableRulesetIds: enabled ? [CONFIG.XCANCEL_RULESET_ID] : [],
+            disableRulesetIds: enabled ? [] : [CONFIG.XCANCEL_RULESET_ID]
+        });
+    } catch (error) {
+        console.error('Failed to sync xcancel redirect ruleset:', error);
+    }
+}
+
+// Re-sync on every service worker startup, since MV3 workers unload and restart frequently.
+syncXcancelRuleset();
+
+browser.storage.onChanged.addListener((changes, areaName) => {
+    if (areaName === 'local' && CONFIG.XCANCEL_STORAGE_KEY in changes) {
+        syncXcancelRuleset();
+    }
+});
