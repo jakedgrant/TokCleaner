@@ -88,11 +88,34 @@ async function checkCurrentPage() {
     }
 }
 
+// Read the stored X/Twitter -> xcancel.com preference and wire the toggle.
+async function initXcancelToggle() {
+    const toggle = document.getElementById('xcancel-toggle');
+    if (!toggle) return;
+
+    try {
+        const stored = await browser.storage.local.get({ [CONFIG.XCANCEL_STORAGE_KEY]: false });
+        toggle.checked = stored[CONFIG.XCANCEL_STORAGE_KEY] === true;
+    } catch (error) {
+        console.error('TokCleaner: failed to read xcancel redirect preference:', error);
+    }
+
+    toggle.addEventListener('change', async () => {
+        try {
+            await browser.storage.local.set({ [CONFIG.XCANCEL_STORAGE_KEY]: toggle.checked });
+        } catch (error) {
+            console.error('TokCleaner: failed to save xcancel redirect preference:', error);
+            toggle.checked = !toggle.checked;
+        }
+    });
+}
+
 // Test functionality
 document.addEventListener('DOMContentLoaded', async () => {
     // Check status on load
     await checkExtensionStatus();
     await checkCurrentPage();
+    await initXcancelToggle();
 
     // Test button
     const testBtn = document.getElementById('test-btn');

@@ -57,6 +57,13 @@ struct HowItWorksView: View {
                 )
                 .accessibilityIdentifier("featureCard_4")
 
+                FeatureCard(
+                    icon: "arrow.triangle.2.circlepath",
+                    title: "X/Twitter Redirect",
+                    description: "Off by default. Tap the TokCleaner icon in Safari's toolbar to turn it on, and links to x.com or twitter.com open on xcancel.com instead."
+                )
+                .accessibilityIdentifier("featureCard_5")
+
                 // Example Section
                 URLComparisonCard(
                     title: "Example",
@@ -66,6 +73,15 @@ struct HowItWorksView: View {
                     afterURL: "tiktok.com/@user/video/123"
                 )
                 .accessibilityIdentifier("urlComparisonCard_example")
+
+                URLComparisonCard(
+                    title: "X/Twitter Example (When Enabled)",
+                    beforeLabel: "Before",
+                    beforeURL: "x.com/someuser/status/123?s=20",
+                    afterLabel: "After",
+                    afterURL: "xcancel.com/someuser/status/123?s=20"
+                )
+                .accessibilityIdentifier("urlComparisonCard_xcancel_example")
 
                 // Privacy Section
                 EmphasisCard(

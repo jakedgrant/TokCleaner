@@ -15,7 +15,13 @@ const CONFIG = {
     TEST_REDIRECT_WAIT_MS: 2000,
 
     // Banner display duration (2.5 seconds)
-    BANNER_DISPLAY_MS: 2500
+    BANNER_DISPLAY_MS: 2500,
+
+    // browser.storage.local key for the opt-in X/Twitter -> xcancel.com redirect toggle
+    XCANCEL_STORAGE_KEY: 'xcancelRedirectEnabled',
+
+    // declarativeNetRequest ruleset id for the xcancel redirect (must match manifest.json)
+    XCANCEL_RULESET_ID: 'xcancel_redirect_rules'
 };
 
 // Export for ES modules (background.js, popup.js)

@@ -112,6 +112,7 @@
 			membershipExceptions = (
 				Resources/_locales,
 				Resources/background.js,
+				Resources/constants.js,
 				Resources/content.js,
 				Resources/images,
 				Resources/manifest.json,
@@ -119,6 +120,7 @@
 				Resources/popup.html,
 				Resources/popup.js,
 				Resources/rules.json,
+				Resources/xcancel_redirect_rules.json,
 				SafariWebExtensionHandler.swift,
 			);
 			target = 2333C7C02EBEFD51007D8A89 /* TokCleaner Extension (iOS) */;
@@ -128,6 +130,7 @@
 			membershipExceptions = (
 				Resources/_locales,
 				Resources/background.js,
+				Resources/constants.js,
 				Resources/content.js,
 				Resources/images,
 				Resources/manifest.json,
@@ -135,6 +138,7 @@
 				Resources/popup.html,
 				Resources/popup.js,
 				Resources/rules.json,
+				Resources/xcancel_redirect_rules.json,
 				SafariWebExtensionHandler.swift,
 			);
 			target = 2333C7CA2EBEFD51007D8A89 /* TokCleaner Extension (macOS) */;

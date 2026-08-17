@@ -24,6 +24,11 @@
                 "id": "tiktok_redirect_rules",
                 "enabled": true,
                 "path": "rules.json"
+            },
+            {
+                "id": "xcancel_redirect_rules",
+                "enabled": false,
+                "path": "xcancel_redirect_rules.json"
             }
         ]
     },
@@ -31,11 +36,16 @@
     "permissions": [
         "declarativeNetRequestWithHostAccess",
         "webNavigation",
-        "tabs"
+        "tabs",
+        "storage"
     ],
 
     "host_permissions": [
-        "*://*.tiktok.com/*"
+        "*://*.tiktok.com/*",
+        "*://x.com/*",
+        "*://www.x.com/*",
+        "*://twitter.com/*",
+        "*://www.twitter.com/*"
     ],
 
     "content_scripts": [
