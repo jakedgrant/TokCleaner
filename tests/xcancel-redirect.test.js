@@ -14,10 +14,16 @@ const rulesPath = path.join(
 );
 const rules = JSON.parse(readFileSync(rulesPath, 'utf8'));
 
+// Mirrors declarativeNetRequest's "transform" redirect action: fields left
+// unset on the transform (path, query, fragment) are carried over from the
+// original URL untouched.
 function applyRule(rule, url) {
-    const match = url.match(new RegExp(rule.condition.regexFilter));
-    if (!match) return null;
-    return rule.action.redirect.regexSubstitution.replace(/\\(\d)/g, (_, n) => match[n] ?? '');
+    if (!new RegExp(rule.condition.regexFilter).test(url)) return null;
+    const { transform } = rule.action.redirect;
+    const result = new URL(url);
+    if (transform.scheme) result.protocol = `${transform.scheme}:`;
+    if (transform.host) result.hostname = transform.host;
+    return result.toString();
 }
 
 // Mirrors how declarativeNetRequest evaluates a ruleset: the first rule
@@ -35,8 +41,15 @@ test('rule ids are unique', () => {
     assert.equal(new Set(ids).size, ids.length);
 });
 
+test('rules avoid regexSubstitution, which Safari does not reliably support', () => {
+    for (const rule of rules) {
+        assert.equal('regexSubstitution' in rule.action.redirect, false);
+        assert.ok(rule.action.redirect.transform);
+    }
+});
+
 test('redirects bare x.com with no path', () => {
-    assert.equal(redirectFor('https://x.com'), 'https://xcancel.com');
+    assert.equal(redirectFor('https://x.com'), 'https://xcancel.com/');
 });
 
 test('redirects bare twitter.com with trailing slash', () => {
@@ -44,7 +57,7 @@ test('redirects bare twitter.com with trailing slash', () => {
 });
 
 test('redirects www.x.com', () => {
-    assert.equal(redirectFor('https://www.x.com'), 'https://xcancel.com');
+    assert.equal(redirectFor('https://www.x.com'), 'https://xcancel.com/');
 });
 
 test('preserves path and query string on x.com', () => {
