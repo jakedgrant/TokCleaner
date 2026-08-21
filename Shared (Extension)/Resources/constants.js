@@ -20,6 +20,10 @@ const CONFIG = {
     // browser.storage.local key for the opt-in X/Twitter -> xcancel.com redirect toggle
     XCANCEL_STORAGE_KEY: 'xcancelRedirectEnabled',
 
+    // browser.storage.local key holding the last error (if any) from syncing the
+    // xcancel ruleset's enabled state, so the popup can surface it to the user.
+    XCANCEL_SYNC_ERROR_KEY: 'xcancelRedirectSyncError',
+
     // declarativeNetRequest ruleset id for the xcancel redirect (must match manifest.json)
     XCANCEL_RULESET_ID: 'xcancel_redirect_rules'
 };

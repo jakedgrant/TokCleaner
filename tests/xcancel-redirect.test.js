@@ -14,13 +14,23 @@ const rulesPath = path.join(
 );
 const rules = JSON.parse(readFileSync(rulesPath, 'utf8'));
 
+// Mirrors declarativeNetRequest's urlFilter mini-language for the subset of
+// syntax these rules use: a leading '|' anchors the match to the start of
+// the URL, and '*' matches any run of characters.
+function urlFilterToRegex(filter) {
+    const anchored = filter.startsWith('|');
+    const body = anchored ? filter.slice(1) : filter;
+    const escaped = body.replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*');
+    return new RegExp((anchored ? '^' : '') + escaped);
+}
+
 // Mirrors declarativeNetRequest's "transform" redirect action: fields left
 // unset on the transform (path, query, fragment) are carried over from the
 // original URL untouched.
-function applyRule(rule, url) {
-    if (!new RegExp(rule.condition.regexFilter).test(url)) return null;
+function applyRule(rule, normalizedUrl) {
+    if (!urlFilterToRegex(rule.condition.urlFilter).test(normalizedUrl)) return null;
     const { transform } = rule.action.redirect;
-    const result = new URL(url);
+    const result = new URL(normalizedUrl);
     if (transform.scheme) result.protocol = `${transform.scheme}:`;
     if (transform.host) result.hostname = transform.host;
     return result.toString();
@@ -28,9 +38,12 @@ function applyRule(rule, url) {
 
 // Mirrors how declarativeNetRequest evaluates a ruleset: the first rule
 // (by ascending priority, then by original order) whose condition matches wins.
+// Conditions are evaluated against the browser's already-normalized request
+// URL (e.g. "https://x.com" becomes "https://x.com/"), same as real navigation.
 function redirectFor(url) {
+    const normalizedUrl = new URL(url).toString();
     for (const rule of rules) {
-        const result = applyRule(rule, url);
+        const result = applyRule(rule, normalizedUrl);
         if (result !== null) return result;
     }
     return null;
@@ -41,10 +54,12 @@ test('rule ids are unique', () => {
     assert.equal(new Set(ids).size, ids.length);
 });
 
-test('rules avoid regexSubstitution, which Safari does not reliably support', () => {
+test('rules avoid regexSubstitution and regexFilter, which Safari does not reliably support', () => {
     for (const rule of rules) {
         assert.equal('regexSubstitution' in rule.action.redirect, false);
+        assert.equal('regexFilter' in rule.condition, false);
         assert.ok(rule.action.redirect.transform);
+        assert.ok(rule.condition.urlFilter);
     }
 });
 
