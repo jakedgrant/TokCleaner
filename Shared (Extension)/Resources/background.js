@@ -73,16 +73,21 @@ browser.tabs.onRemoved.addListener((tabId) => {
 // The "xcancel_redirect_rules" ruleset is declared disabled in manifest.json;
 // this keeps its enabled state in sync with the user's stored preference.
 async function syncXcancelRuleset() {
-    try {
-        const stored = await browser.storage.local.get({ [CONFIG.XCANCEL_STORAGE_KEY]: false });
-        const enabled = stored[CONFIG.XCANCEL_STORAGE_KEY] === true;
+    const stored = await browser.storage.local.get({ [CONFIG.XCANCEL_STORAGE_KEY]: false });
+    const enabled = stored[CONFIG.XCANCEL_STORAGE_KEY] === true;
 
+    try {
         await browser.declarativeNetRequest.updateEnabledRulesets({
             enableRulesetIds: enabled ? [CONFIG.XCANCEL_RULESET_ID] : [],
             disableRulesetIds: enabled ? [] : [CONFIG.XCANCEL_RULESET_ID]
         });
+        await browser.storage.local.set({ [CONFIG.XCANCEL_SYNC_ERROR_KEY]: null });
     } catch (error) {
         console.error('Failed to sync xcancel redirect ruleset:', error);
+        // Surfaced in the popup so a failure here isn't invisible to the user.
+        await browser.storage.local.set({
+            [CONFIG.XCANCEL_SYNC_ERROR_KEY]: String((error && error.message) || error)
+        });
     }
 }
 

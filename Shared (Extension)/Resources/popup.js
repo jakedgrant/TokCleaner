@@ -91,18 +91,41 @@ async function checkCurrentPage() {
 // Read the stored X/Twitter -> xcancel.com preference and wire the toggle.
 async function initXcancelToggle() {
     const toggle = document.getElementById('xcancel-toggle');
+    const errorEl = document.getElementById('xcancel-toggle-error');
     if (!toggle) return;
 
+    const showSyncError = (message) => {
+        if (!errorEl) return;
+        if (message) {
+            errorEl.textContent = `⚠️ Redirect isn't active: ${message}`;
+            errorEl.hidden = false;
+        } else {
+            errorEl.hidden = true;
+        }
+    };
+
     try {
-        const stored = await browser.storage.local.get({ [CONFIG.XCANCEL_STORAGE_KEY]: false });
+        const stored = await browser.storage.local.get({
+            [CONFIG.XCANCEL_STORAGE_KEY]: false,
+            [CONFIG.XCANCEL_SYNC_ERROR_KEY]: null
+        });
         toggle.checked = stored[CONFIG.XCANCEL_STORAGE_KEY] === true;
+        if (toggle.checked) showSyncError(stored[CONFIG.XCANCEL_SYNC_ERROR_KEY]);
     } catch (error) {
         console.error('TokCleaner: failed to read xcancel redirect preference:', error);
     }
 
+    // The background service worker updates the sync error after each toggle change.
+    browser.storage.onChanged.addListener((changes, areaName) => {
+        if (areaName === 'local' && CONFIG.XCANCEL_SYNC_ERROR_KEY in changes && toggle.checked) {
+            showSyncError(changes[CONFIG.XCANCEL_SYNC_ERROR_KEY].newValue);
+        }
+    });
+
     toggle.addEventListener('change', async () => {
         try {
             await browser.storage.local.set({ [CONFIG.XCANCEL_STORAGE_KEY]: toggle.checked });
+            if (!toggle.checked) showSyncError(null);
         } catch (error) {
             console.error('TokCleaner: failed to save xcancel redirect preference:', error);
             toggle.checked = !toggle.checked;

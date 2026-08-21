@@ -111,6 +111,17 @@ h1 {
     color: var(--text-secondary);
 }
 
+.setting-error {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #ff3b30;
+    margin-top: 6px;
+}
+
+.setting-error[hidden] {
+    display: none;
+}
+
 /* Settings */
 .setting-row {
     display: flex;

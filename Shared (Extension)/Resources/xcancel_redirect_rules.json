@@ -12,7 +12,7 @@
             }
         },
         "condition": {
-            "regexFilter": "^https?://(?:www\\.)?x\\.com(/.*)?$",
+            "urlFilter": "|*://x.com/*",
             "resourceTypes": ["main_frame"]
         }
     },
@@ -29,7 +29,41 @@
             }
         },
         "condition": {
-            "regexFilter": "^https?://(?:www\\.)?twitter\\.com(/.*)?$",
+            "urlFilter": "|*://www.x.com/*",
+            "resourceTypes": ["main_frame"]
+        }
+    },
+    {
+        "id": 3,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "transform": {
+                    "scheme": "https",
+                    "host": "xcancel.com"
+                }
+            }
+        },
+        "condition": {
+            "urlFilter": "|*://twitter.com/*",
+            "resourceTypes": ["main_frame"]
+        }
+    },
+    {
+        "id": 4,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "transform": {
+                    "scheme": "https",
+                    "host": "xcancel.com"
+                }
+            }
+        },
+        "condition": {
+            "urlFilter": "|*://www.twitter.com/*",
             "resourceTypes": ["main_frame"]
         }
     }
