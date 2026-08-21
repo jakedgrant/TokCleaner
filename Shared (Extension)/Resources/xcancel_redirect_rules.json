@@ -5,7 +5,10 @@
         "action": {
             "type": "redirect",
             "redirect": {
-                "regexSubstitution": "https://xcancel.com\\1"
+                "transform": {
+                    "scheme": "https",
+                    "host": "xcancel.com"
+                }
             }
         },
         "condition": {
@@ -19,7 +22,10 @@
         "action": {
             "type": "redirect",
             "redirect": {
-                "regexSubstitution": "https://xcancel.com\\1"
+                "transform": {
+                    "scheme": "https",
+                    "host": "xcancel.com"
+                }
             }
         },
         "condition": {
